@@ -1,1 +1,1 @@
-AI Team number two
+AI Team
