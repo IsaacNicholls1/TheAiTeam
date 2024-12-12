@@ -10,14 +10,17 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <title>The Arcade</title>
     <style>
+        body {
+            margin-top: 78.2px;
+        }
         .navbar-logo {
             display: none;
         }
-        /* .press-start-2p-regular {
+        .nav-item * {
             font-family: "Press Start 2P", system-ui;
-            font-weight: 400;
+            font-weight: 200;
             font-style: normal;
-        } */
+        }
         body,
         footer,
         header,
@@ -25,28 +28,30 @@
             background-color: #212529;
             color: #fff;
         }
-
-        form .nes-field {
-            /* background-color: #212529; */
-            /* padding: 1rem; */
+        h2{
+            font-size: 1.5rem;
         }
-
-        /* form label {
-            color: #fff;
-        } */
-
-        /* form .ness-select {
-            background-color: #212529;
-            padding: 1rem 1.2rem 1rem 1rem;
-            width: calc(100% + 8px)
-        }  */
+        p {
+            font-family: "Press Start 2P", system-ui;
+            font-weight: 200;
+            font-style: normal;
+            font-size: 0.9rem;            
+        }        
+        .nes-select .form-select {
+            height: 3.5rem;
+            padding: 0.375rem 0.75rem;
+            margin-bottom: 18px;
+        }
+        .nes-input {
+            height: 3.5rem;
+        }
         @media (max-width: 768px) {
-                .navbar-text {
+            .navbar-text {
                 display: none;
             }
-                .navbar-logo {
+            .navbar-logo {
                 display: inline;
-            }
+            }           
         }
     </style>
 </head>
@@ -54,21 +59,21 @@
 <body data-bs-theme="dark">
 
     <!-- nav bar -->
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
-        <div class="container-fluid">           
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container-fluid">
             <a class="navbar-brand" href="#">
-                <span class="navbar-text">The Arcade</span>               
+                <span class="navbar-text">The Arcade</span>
                 <img src="assets/images/logo-site.png" class="navbar-logo" alt="The Arcade Logo" width="50" height="50">
-              </a>
+            </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 ">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                        <a class="nav-link" href="index.html">Home</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="about.html">About</a>
@@ -85,7 +90,7 @@
                         </ul>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="contact.html">Contact</a>
+                        <a class="nav-link active" href="contact.html" aria-current="page">Contact</a>
                     </li>
                 </ul>
             </div>
@@ -107,6 +112,16 @@
 -->
     <!-- content -->
     <section id="booking-form" class="container section">
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-8 text-center text-xl-start">
+                <h1 class="display-3">Arcade Games</h1>
+                <p class="my-4 text-start">
+                    We appreciate you reaching out to Arcade Games! Please select the
+                    type of message you want to send in the dropdown below, and it will
+                    be directed to the appropriate specialist or area.
+                </p>
+            </div>
+        </div>
         <div class="row justify-content-center">
             <div id="error-message" class="text-center m-5" style="display: none;">
                 <span class="nes-text is-error">Please fill out all fields.</span>
@@ -131,12 +146,11 @@
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-12 col-md-12 col-lg-6  mb-3 nes-field">
+                            <div class="col-12 col-md-12 col-lg-6 mb-3 nes-field">
                                 <label for="phone" class="form-label">Phone number</label>
                                 <input class="nes-input is-dark" id="phone" name="phone" type="number" />
                             </div>
-                            <div class="col-12 col-md-12 col-lg-6 mb-3"
-                                style="background-color:#212529; padding: 1rem 1.2rem 1rem 1rem;">
+                            <div class="col-12 col-md-12 col-lg-6 mb-0 nes-field">
                                 <label for="event-type" class="form-label">Message type</label>
                                 <div class="nes-select is-dark">
                                     <select id="event-type" class="form-select" name="event-type">
@@ -157,11 +171,11 @@
                         </div>
                     </div>
                 </div>
-                    <div class="row justify-content-center">
-                        <div class="col-12 text-center mb-5">
-                            <button type="submit" class="nes-btn is-primary">Submit</button>
-                        </div>
+                <div class="row justify-content-center">
+                    <div class="col-12 text-center mb-5">
+                        <button type="submit" class="nes-btn is-primary">Submit</button>
                     </div>
+                </div>
             </form>
         </div>
     </section>
