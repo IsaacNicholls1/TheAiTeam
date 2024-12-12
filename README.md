@@ -1,1 +1,1 @@
-AI Team Version 2
+AI Team
