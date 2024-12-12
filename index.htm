@@ -1,11 +1,307 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Arcade</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <title>Straight White Man</title>
 </head>
-<body>
-    
+
+<body data-bs-theme="dark">
+
+    <!-- nav bar -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Navbar</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Dropdown
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+    <!-- hero image -->
+    <section
+        style="background-image: url('assets/images/straight-white-man-hero.png'); height: 700px; background-size: cover; background-position: center;">
+        <div
+            class="container h-100 d-flex flex-column justify-content-center align-items-center text-center text-white hero-image py-5">
+            <h1 class="mb-4">Confused & feeling overlooked in the modern workplace?</h1>
+            <h2>Welcome to Straight White Man</h2>
+            <div class="pt-3" id="hero-buttons">
+                <a href="forum.html" class="btn btn-primary me-2">Join the conversation</a>
+                <a href="contact.html" class="btn btn-secondary">Reach out</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- alone -->
+    <section id="alone">
+        <div class="container my-5">
+            <div class="row featurette gx-5">
+                <div class="col-md-8">
+                    <h2 class="featurette-heading">You're
+                        not alone</h2>
+                    <p>The world is changing rapidly, and sometimes it feels like the rules of the game
+                        have been rewritten overnight. If you're a straight white man, you might be feeling
+                        marginalised, misunderstood, or even blamed for things you don't feel responsible for. We are
+                        here to help!</p>
+                    <p>Navigating this evolving social landscape can present challenges, particularly when encountering
+                        contemporary perspectives on gender, sexuality, masculinity, diversity, family, and mental
+                        health that may appear to diverge from traditional facts. These shifts in societal
+                        norms can be particularly difficult to comprehend for individuals whose foundational beliefs
+                        were formed in a different era.</p>
+                    <p>Straight White Man is a resource for navigating the complexities of today's
+                        woke workplace. We provide a platform for open discussion, support, and practical advice
+                        to help you.</p>
+                        <a href="forum.html" class="btn btn-primary me-2">Join the conversation</a>
+                </div>
+                <div class="col-md-4">
+                    <img src="assets/images/what-is-she-doing-in-here.jpg" class="img-fluid"
+                        alt="What is she doing in here?">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- not alone -->
+    <section id="not-alone">
+        <div class="container my-5">
+            <div class="row featurette gx-5">
+                <div class="col-md-8 order-md-2">
+                    <h2 class="featurette-heading">We feel your pain</h2>
+                    <p>With rapid social changes, it's easy to feel like the ground is constantly shifting beneath
+                        your feet. Are you a straight white male over 50 who feels like your voice is being silenced? Do
+                        you feel like your opinions and experiences are dismissed or labeled as "privileged," even when
+                        your
+                        reality feels far from it? Perhaps you're concerned that merit and hard work are becoming less
+                        important than meeting quotas, or you worry about saying the wrong thing and facing unintended
+                        consequences.</p>
+
+                    <p>If any of this resonates, you're not alone. This website is a resource for those who feel like
+                        they're navigating a minefield of constantly evolving social norms and expectations. We're here
+                        to
+                        provide a safe space for open dialogue, offer practical tools for navigating challenging
+                        conversations, and help you find answers that empower you to thrive in the modern world.</p>
+                        <a href="contact.html" class="btn btn-secondary">Reach out</a>
+                </div>
+                <div class="col-md-4 order-md-1">
+                    <img src="assets/images/who-can-i-employ.jpg" class="img-fluid" alt="Who can I employ?">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- tools -->
+    <section id="tools">
+        <div class="container my-5 d-flex justify-content-center">
+            <div class="col-lg-9">
+                <h2 class="center">Safety in numbers</h2>
+                <p class="center">Our goal is to create a supportive community where individuals feel heard, respected,
+                    and empowered to thrive in the modern workplace. Working together we can survive this mess!</p>
+                <div class="accordion" id="accordionExample">
+                    <div class="accordion-item">
+                        <h3 class="accordion-header" id="headingOne">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                <strong>Enhance communication skills</strong>
+                            </button>
+                        </h3>
+                        <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
+                            data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <p>Develop strategies for engaging in respectful and productive conversations across
+                                    diverse viewpoints.</p>
+
+                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+                                    Ipsum has been the industry's standard dummy text ever since the 1500s, when an
+                                    unknown printer
+                                    took a galley of type and scrambled it to make a type specimen book. It has survived
+                                    not only
+                                    five centuries, but also the leap into electronic typesetting, remaining essentially
+                                    unchanged. It was popularised in the 1960s with the release of Letraset sheets
+                                    containing Lorem
+                                    Ipsum passages, and more recently with desktop publishing software like Aldus
+                                    PageMaker
+                                    including versions of Lorem Ipsum.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h3 class="accordion-header" id="headingTwo">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                <strong>Understand evolving social norms</strong>
+                            </button>
+                        </h3>
+                        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                            data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <p>Gain insights into the cultural shifts shaping workplace expectations.</p>
+
+                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+                                    Ipsum has been the industry's standard dummy text ever since the 1500s, when an
+                                    unknown printer
+                                    took a galley of type and scrambled it to make a type specimen book. It has survived
+                                    not only
+                                    five centuries, but also the leap into electronic typesetting, remaining essentially
+                                    unchanged. It was popularised in the 1960s with the release of Letraset sheets
+                                    containing Lorem
+                                    Ipsum passages, and more recently with desktop publishing software like Aldus
+                                    PageMaker
+                                    including versions of Lorem Ipsum.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h3 class="accordion-header" id="headingThree">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                <strong>Build strong relationships</strong>
+                            </button>
+                        </h3>
+                        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                            data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <p>Foster connections with colleagues based on mutual respect and understanding.</p>
+
+                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+                                    Ipsum has been the industry's standard dummy text ever since the 1500s, when an
+                                    unknown printer
+                                    took a galley of type and scrambled it to make a type specimen book. It has survived
+                                    not only
+                                    five centuries, but also the leap into electronic typesetting, remaining essentially
+                                    unchanged. It was popularised in the 1960s with the release of Letraset sheets
+                                    containing Lorem
+                                    Ipsum passages, and more recently with desktop publishing software like Aldus
+                                    PageMaker
+                                    including versions of Lorem Ipsum.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h3 class="accordion-header" id="headingFour">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                <strong>Advocate for your needs</strong>
+                            </button>
+                        </h3>
+                        <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
+                            data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <p>Learn how to effectively express your perspectives while maintaining positive
+                                    working relationships.</p>
+
+                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+                                    Ipsum has been the industry's standard dummy text ever since the 1500s, when an
+                                    unknown printer
+                                    took a galley of type and scrambled it to make a type specimen book. It has survived
+                                    not only
+                                    five centuries, but also the leap into electronic typesetting, remaining essentially
+                                    unchanged. It was popularised in the 1960s with the release of Letraset sheets
+                                    containing Lorem
+                                    Ipsum passages, and more recently with desktop publishing software like Aldus
+                                    PageMaker
+                                    including versions of Lorem Ipsum.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- resources -->
+    <section id="information">
+        <div class="container my-5">
+            <h2>Forearmed is forewarned</h2>
+            <div class="row">
+                <div class="col-md-4 p-4">
+                    <img src="assets/images/platform-compatibility-issues.jpg" class="img-fluid pb-3" alt="Straight White Man resources">
+                    <h3 class="pt-3">Resources:</h3>
+                    <ul id="resources">
+                        <li><a href="#">Navigating the nuances of DEI</a></li>
+                        <li><a href="#">Is "White Privilege" fair?</a></li>
+                        <li><a href="#">Finding your voice in a changing world</a></li>
+                        <li><a href="#">Dealing with reverse discrimination</a></li>
+                        <li><a href="#">Protecting your mental health</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 p-4">
+                    <img src="assets/images/everyone-drinks-beer-right.jpg" class="img-fluid pb-3" alt="Straight White Man legal advice">
+                    <h3 class="pt-3">Legal advice:</h3>
+                    <ul id="advice">
+                        <li><a href="#">Know your rights and employment discrimination</a></li>
+                        <li><a href="#">Understanding free speech in the workplace</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 p-4">
+                    <img src="assets/images/i-cant-see-her-face.jpg" class="img-fluid pb-3" alt="Straight White Man help and advise">
+                    <h3 class="pt-3">What we help with:</h3>
+                    <ul id="help">
+                        <li>Navigating the changing landscape of DEI.</li>
+                        <li>Addressing your concerns about fairness and opportunity.</li>
+                        <li>Finding your voice in a culture that often feels hostile.</li>
+                        <li>Connecting with others who share your experiences.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- cta -->
+    <section id="action" class="py-5"
+        style="background-image: url('assets/images/straight-white-man-bg.png');">
+        <div class="container">
+            <div class="text-center">
+                <div class="py-3">
+                    <h2>Sign up and enjoy free speech!</h2>
+                    <p>Because it's okay to celebrate Christmas, fly the Union Flag and practice chivalry!</p>
+                    <a href="#" class="btn btn-primary">Join the conversation</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- footer -->
+    <footer id="footer" class="mt-auto py-5 bg-dark text-white">
+        <div class="container">
+            <div class="row">
+                <div class="col text-center">
+                    <span>&copy; 2024 Straight White Man</span>&nbsp;|&nbsp;
+                    <a href="#" class="text-white me-3">Privacy Policy</a>&nbsp;|&nbsp;
+                    <a href="#" class="text-white">Terms & Conditions</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
 </body>
+
 </html>
