@@ -9,14 +9,57 @@
     <link href="https://unpkg.com/nes.css/css/nes.css" rel="stylesheet" />
     <link rel="stylesheet" href="assets/css/style.css">
     <title>The Arcade</title>
+    <style>
+        .navbar-logo {
+            display: none;
+        }
+        /* .press-start-2p-regular {
+            font-family: "Press Start 2P", system-ui;
+            font-weight: 400;
+            font-style: normal;
+        } */
+        body,
+        footer,
+        header,
+        nav {
+            background-color: #212529;
+            color: #fff;
+        }
+
+        form .nes-field {
+            /* background-color: #212529; */
+            /* padding: 1rem; */
+        }
+
+        /* form label {
+            color: #fff;
+        } */
+
+        /* form .ness-select {
+            background-color: #212529;
+            padding: 1rem 1.2rem 1rem 1rem;
+            width: calc(100% + 8px)
+        }  */
+        @media (max-width: 768px) {
+                .navbar-text {
+                display: none;
+            }
+                .navbar-logo {
+                display: inline;
+            }
+        }
+    </style>
 </head>
 
 <body data-bs-theme="dark">
 
     <!-- nav bar -->
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#">The Arcade</a>
+        <div class="container-fluid">           
+            <a class="navbar-brand" href="#">
+                <span class="navbar-text">The Arcade</span>               
+                <img src="assets/images/logo-site.png" class="navbar-logo" alt="The Arcade Logo" width="50" height="50">
+              </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation">
@@ -49,7 +92,7 @@
         </div>
     </nav>
 
-    <!-- hero image -->
+    <!-- hero image 
     <section
         style="background-image: url('assets/images/the-arcade-hero.jpg'); background-size: cover; background-position: center;">
         <div
@@ -61,48 +104,69 @@
             </div>
         </div>
     </section>
-
+-->
     <!-- content -->
-    <section id="contact">
-        <div class="container my-5">
-            <div class="row featurette gx-5">
-                <div class="col-md-8 order-md-2" id="contact">
-                    <h2 class="featurette-heading">Get in touch</h2>
-                    <p>We'd love to hear from you. Whether you have questions, suggestions, or just want to connect,
-                        please feel free to reach out. <em>*We do not share your data with any third parties</em>.</p>
-                    <!-- form -->
-                    <div class="form">
-                        <form class="row g-3">
-                            <div class="col-lg-4">
-                                <label for="fullName" class="form-label">Full name</label>
-                                <input type="text" class="form-control" id="fullName">
+    <section id="booking-form" class="container section">
+        <div class="row justify-content-center">
+            <div id="error-message" class="text-center m-5" style="display: none;">
+                <span class="nes-text is-error">Please fill out all fields.</span>
+            </div>
+            <div id="success-message" class="text-center m-5" style="display: none;">
+                <span class="nes-text is-success">
+                    Thank you for your message! We will get back to you shortly.
+                </span>
+            </div>
+            <form id="contactForm" method="get" action="#" onsubmit="return validateForm()">
+                <div class="row justify-content-center">
+                    <div class="col-12 col-md-8">
+                        <h2>Contact Form</h2>
+                        <div class="row">
+                            <div class="col-12 col-md-12 col-lg-6 mb-3 nes-field">
+                                <label for="name" class="form-label">Name</label>
+                                <input class="nes-input is-dark" id="name" name="name" type="text" />
                             </div>
-                            <div class="col-lg-4">
-                                <label for="phoneNumber" class="form-label">Phone number</label>
-                                <input type="tel" class="form-control" id="phoneNumber">
-                            </div>
-                            <div class="col-lg-4">
+                            <div class="col-12 col-md-12 col-lg-6  mb-3 nes-field">
                                 <label for="email" class="form-label">Email</label>
-                                <input type="email" class="form-control" id="email">
+                                <input class="nes-input is-dark" id="email" name="email" type="email" />
                             </div>
-                            <div class="col-12">
-                                <label for="message" class="form-label">Message or question</label>
-                                <input type="textarea" class="form-control" id="message">
+                        </div>
+                        <div class="row">
+                            <div class="col-12 col-md-12 col-lg-6  mb-3 nes-field">
+                                <label for="phone" class="form-label">Phone number</label>
+                                <input class="nes-input is-dark" id="phone" name="phone" type="number" />
                             </div>
-                            <div class="col-12">
-                                <button type="submit" class="btn btn-primary">Send</button>
+                            <div class="col-12 col-md-12 col-lg-6 mb-3"
+                                style="background-color:#212529; padding: 1rem 1.2rem 1rem 1rem;">
+                                <label for="event-type" class="form-label">Message type</label>
+                                <div class="nes-select is-dark">
+                                    <select id="event-type" class="form-select" name="event-type">
+                                        <option value="" selected>Select</option>
+                                        <option value="support">Customer Support</option>
+                                        <option value="feedback">Feedback</option>
+                                        <option value="partnership">Partnership Inquiry</option>
+                                        <option value="general">General Inquiry</option>
+                                    </select>
+                                </div>
                             </div>
-                        </form>
+                        </div>
+                        <div class="row">
+                            <div class="col-12 mb-3">
+                                <label for="message" class="form-label">Message</label>
+                                <textarea class="nes-textarea  is-dark" rows="6" id="message" name="message"></textarea>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="col-md-4 order-md-1">
-                    <p>Some text here and contact details</p>
-                </div>
-            </div>
+                    <div class="row justify-content-center">
+                        <div class="col-12 text-center mb-5">
+                            <button type="submit" class="nes-btn is-primary">Submit</button>
+                        </div>
+                    </div>
+            </form>
         </div>
     </section>
 
-    <!-- cta -->
+    <!-- cta 
     <section id="action" class="py-5" style="background-color: #333;">
         <div class="container">
             <div class="text-center">
@@ -115,15 +179,62 @@
             </div>
         </div>
     </section>
+    -->
 
     <!-- footer -->
-    <footer id="footer" class="mt-auto py-5 bg-dark text-white">
+    <footer class="bg-dark" data-bs-theme="dark">
         <div class="container">
-            <div class="row">
-                <div class="col text-center">
-                    <span>&copy; 2024 The Arcade</span>&nbsp;|&nbsp;
-                    <a href="privacy-policy.html" class="text-white">Privacy Policy</a>&nbsp; &nbsp;|&nbsp; &nbsp;<a
-                        href="terms-conditions.html" class="text-white">Terms & Conditions</a>
+            <div class="row justify-content-center text-center">
+
+                <div class="col-md-6">
+                    <h5>Navigation</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"></li>
+                        <a href="index.html" class="text-decoration-none">Home</a>
+                        </li>
+                        <li class="mb-2"></li>
+                        <a href="about.html" class="text-decoration-none">About</a>
+                        </li>
+                        <li class="mb-2"></li>
+                        <a href="contact.html" class="text-decoration-none">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-6">
+                    <h5>Follow Us</h5>
+                    <ul class="list-inline mt-4">
+                        <li class="list-inline-item">
+                            <a href="https://www.instagram.com" class="text-decoration-none">
+                                <i class="nes-icon instagram is-medium"></i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="https://www.facebook.com" class="text-decoration-none">
+                                <i class="nes-icon facebook is-medium"></i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="https://www.youtube.com" class="text-decoration-none">
+                                <i class="nes-icon youtube is-medium"></i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="https://www.twitter.com" class="text-decoration-none">
+                                <i class="nes-icon twitter is-medium"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+            <div class="row justify-content-center mt-3">
+                <div class="col-md-6 text-center">
+                    <p>&copy; 2024 Arcade Games. All rights reserved.</p>
+                    <p>
+                        <a href="privacy.html" class="text-decoration-none">Privacy Policy</a>
+                        |
+                        <a href="terms.html" class="text-decoration-none">Terms of Use</a>
+                    </p>
                 </div>
             </div>
         </div>
@@ -131,6 +242,33 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
+    <!-- Form validation -->
+    <script>
+        function validateForm() {
+            const form = document.getElementById('contactForm');
+            const errorMessage = document.getElementById('error-message');
+            const successMessage = document.getElementById('success-message');
+            const inputs = form.querySelectorAll('input, select, textarea');
+            let valid = true;
+
+            inputs.forEach(input => {
+                if (!input.value) {
+                    valid = false;
+                    input.style.borderColor = 'red';
+                }
+            });
+
+            if (!valid) {
+                errorMessage.style.display = 'block';
+                successMessage.style.display = 'none';
+                return false;
+            }
+
+            errorMessage.style.display = 'none';
+            successMessage.style.display = 'block';
+            return false;
+        }
+    </script>
 </body>
 
 </html>
