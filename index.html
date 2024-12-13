@@ -9,6 +9,13 @@
     <link href="https://unpkg.com/nes.css/css/nes.css" rel="stylesheet" />
     <link rel="stylesheet" href="assets/css/style.css">
     <title>The Arcade</title>
+    <style>
+        .card {
+            border-radius: 0;
+            border: 0;
+        }
+    </style>
+
 </head>
 
 <body data-bs-theme="dark">
@@ -16,7 +23,7 @@
     <!-- nav bar -->
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">The Arcade</a>
+            <a class="navbar-brand" href="index.html">The Arcade</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation">
@@ -39,6 +46,7 @@
                             <li><a class="dropdown-item" href="snake.html">Snake</a></li>
                             <li><a class="dropdown-item" href="space-invaders.html">Space Invaders</a></li>
                             <li><a class="dropdown-item" href="pac-man.html">Pac Man</a></li>
+                            <li><a class="dropdown-item" href="stars.html">Stars</a></li>
                         </ul>
                     </li>
                     <li class="nav-item">
@@ -50,10 +58,8 @@
     </nav>
 
     <!-- hero image -->
-    <section
-        style="background-image: url('assets/images/the-arcade-hero.jpg'); background-size: cover; background-position: center;">
-        <div
-            class="container h-100 d-flex flex-column justify-content-center align-items-center text-center text-white hero-image py-5">
+    <section style="background-image: url('assets/images/the-arcade-hero-v2.jpg'); background-size: cover; background-position: center;">
+        <div class="container h-100 d-flex flex-column justify-content-center align-items-center text-center text-white hero-image py-5">
             <h1 class="mb-4">The Arcade</h1>
             <h2>Relax and destress by blasting aliens and overfeeding reptiles!</h2>
             <div class="pt-3" id="hero-buttons">
@@ -62,17 +68,68 @@
         </div>
     </section>
 
-    <!-- content -->
-    <section>
-        <h2 class="text-center">[CONTENT GOES HERE]</h2>
+<!-- stars test -->
+
+    <!-- game cards -->
+    <section id="game-cards" class=" container py-5">
+        <h2 class="text-center">The Arcade Collection</h2>
+        <div class="row">
+            <div class="col-sm-12 col-lg-4">
+                <div class="card mb-3">
+                    <img src="assets/images/space-invaders.jpg" class="card-img-top" alt="Space Invaders">
+                    <div class="card-body">
+                        <h3 class="card-title">Space Invaders</h3>
+                        <p class="card-text">Play the original and classic game of Space Invaders. Kill aliens right
+                            here, right now in gloriuos tecnicolour!</p>
+                        <a href="space-invaders.html" class="btn btn-primary">Play Now</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12 col-lg-4">
+                <div class="card mb-3">
+                    <img src="assets/images/space-invaders.jpg" class="card-img-top" alt="Space Invaders">
+                    <div class="card-body">
+                        <h3 class="card-title">Space Invaders</h3>
+                        <p class="card-text">Play the original and classic game of Space Invaders. Kill aliens right
+                            here, right now in gloriuos tecnicolour!</p>
+                        <a href="space-invaders.html" class="btn btn-primary">Play Now</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12  col-lg-4">
+                <div class="card mb-3">
+                    <img src="assets/images/space-invaders.jpg" class="card-img-top" alt="Space Invaders">
+                    <div class="card-body">
+                        <h3 class="card-title">Space Invaders</h3>
+                        <p class="card-text">Play the original and classic game of Space Invaders. Kill aliens right
+                            here, right now in gloriuos tecnicolour!</p>
+                        <a href="space-invaders.html" class="btn btn-primary">Play Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="container">
+        <div class="row pb-3">
+            <div class="col-md-6">
+                <h2>About The Arcade</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.</p>
+            </div>
+            <div class="col-md-6">
+                <h2>Play now!</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.</p>
+            </div>
+        </div>
     </section>
 
     <!-- cta -->
-    <section id="action" class="py-5" style="background-color: #333;">
+    <section style="background-image: url('assets/images/the-arcade-hero.jpg'); background-size: cover; background-position: center;">
+    <!-- <section id="action" class="py-5" style="background-color: #333;"> -->
         <div class="container">
             <div class="text-center">
                 <div class="py-3">
-                    <h2>Join the Arcade for FREE Games</h2>
+                    <h2>Join The Arcade for FREE Games</h2>
                     <p>Sign up and we will send the latest games direct to your inbox just when you need to kill
                         something most!</p>
                     <a href="#" class="btn btn-primary">Join now</a>
@@ -86,8 +143,7 @@
         <div class="container">
             <div class="row">
                 <div class="col text-center">
-                    <span>&copy; 2024 The Arcade</span>&nbsp;|&nbsp;
-                    <a href="privacy-policy.html" class="text-white">Privacy Policy</a>&nbsp; &nbsp;|&nbsp; &nbsp;<a
+                    <span>&copy; 2024 The Arcade</span>&nbsp; &nbsp;|&nbsp; &nbsp;<a href="privacy-policy.html" class="text-white">Privacy Policy</a>&nbsp; &nbsp;|&nbsp; &nbsp;<a
                         href="terms-conditions.html" class="text-white">Terms & Conditions</a>
                 </div>
             </div>
