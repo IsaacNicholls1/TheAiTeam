@@ -4,57 +4,205 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snake Game</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
-    <link href="https://unpkg.com/nes.css/css/nes.css" rel="stylesheet" />
-    <!-- <link rel="stylesheet" href="assets/css/style.css"> -->
-    <title>The Arcade</title>
+    <link href="https://unpkg.com/nes.css/css/nes.css" rel="stylesheet">
     <style>
         body {
-            background-color: black;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background-image: url('assets/images/snake-machine.png');
-            background-repeat: no-repeat;
-            background-size: contain;
-            background-position: center;
-            width: 100%;
-            height: 100vh;
-            color: white;
+            text-align: center;
         }
 
-        .game-area {
-            /* Visualization */
-            color: red;
-            border: 2px dashed red;
-            /* position */
-            width: 29.7vw;
-            height: 36vh;
-            top: 48%;
-            left: 50.3%;
+        .geeks {
+            font-size: 40px;
+            font-weight: bold;
+            color: green;
+        }
 
-            display: flex;
-            justify-content: center;
-            align-items: center;
+        #board {
+            background-color: #333;
+            display: block;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .start-button {
+            margin-top: 20px;
+        }
+
+        .game-over {
             position: absolute;
+            top: 50%;
+            left: 50%;
             transform: translate(-50%, -50%);
+            color: red;
+            font-size: 25px;
+            font-family: 'Press Start 2P', cursive;
+            display: none;
+        }
+        .game-over-press {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: red;
+            font-size: 10px;
+            font-family: 'Press Start 2P', cursive;
+            display: none;
         }
     </style>
 </head>
 
-<body data-bs-theme="dark">
-    <header>
-    </header>
-    <main>
-        <div class="game-area">
-            <p>game over</p>
+<body>    
+    <div class="container">
+        <div class=" col-md-12 text-center nes-container with-title is-centered">
+            <p class="title">Snake Game</p>
+            <p>Use Arrow keys to move the snake</p>
+            <p>Press Start Game to start the game</p>
+            <canvas id="board"></canvas>
+            <button id="startButton" class="btn btn-primary start-button">Start Game</button>    
+            <div id="gameOverText" class="game-over">Game Over</div>
         </div>
-    </main>
-    <footer>
-    </footer>
+    </div>
+    
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script>
+        let blockSize = 25;
+        let total_row = 17; // total row number
+        let total_col = 17; // total column number
+        let board;
+        let context;
+
+        let snakeX = blockSize * 5;
+        let snakeY = blockSize * 5;
+
+        let speedX = 0; // speed of snake in x coordinate
+        let speedY = 0; // speed of snake in y coordinate
+
+        let snakeBody = [];
+
+        let foodX;
+        let foodY;
+
+        let gameOver = false;
+        let gameInterval;
+
+        window.onload = function () {
+            board = document.getElementById("board");
+            board.height = total_row * blockSize;
+            board.width = total_col * blockSize;
+            context = board.getContext("2d");
+
+            placeFood();
+            document.addEventListener("keyup", changeDirection); // for movements
+            document.getElementById("startButton").addEventListener("click", startGame);
+        }
+
+        function update() {
+            if (gameOver) {
+                clearInterval(gameInterval);
+                showGameOverText();
+                // document.getElementById("startButton").style.display = "block";
+                return;
+            }
+
+            // Background of the game
+            context.fillStyle = "green";
+            context.fillRect(0, 0, board.width, board.height);
+
+            // Set food color and position
+            context.fillStyle = "yellow";
+            context.fillRect(foodX, foodY, blockSize, blockSize);
+
+            if (snakeX == foodX && snakeY == foodY) {
+                snakeBody.push([foodX, foodY]);
+                placeFood();
+            }
+
+            // body of snake will grow
+            for (let i = snakeBody.length - 1; i > 0; i--) {
+                // it will store previous part of snake to the current part
+                snakeBody[i] = snakeBody[i - 1];
+            }
+            if (snakeBody.length) {
+                snakeBody[0] = [snakeX, snakeY];
+            }
+
+            context.fillStyle = "white";
+            snakeX += speedX * blockSize; // updating Snake position in X coordinate
+            snakeY += speedY * blockSize; // updating Snake position in Y coordinate
+            context.fillRect(snakeX, snakeY, blockSize, blockSize);
+            for (let i = 0; i < snakeBody.length; i++) {
+                context.fillRect(snakeBody[i][0], snakeBody[i][1], blockSize, blockSize);
+            }
+
+            if (snakeX < 0 || snakeX >= total_col * blockSize || snakeY < 0 || snakeY >= total_row * blockSize) {
+                // Out of bound condition
+                gameOver = true;
+                showGameOverText();
+                // document.getElementById("startButton").style.display = "block";
+            }
+
+            for (let i = 0; i < snakeBody.length; i++) {
+                if (snakeX == snakeBody[i][0] && snakeY == snakeBody[i][1]) {
+                    // Snake eats own body
+                    gameOver = true;
+                    showGameOverText();
+                    document.getElementB("startButton").style.display = "block";
+                }
+            }
+        }
+
+        // Movement of the Snake - We are using addEventListener
+        function changeDirection(e) {
+            if (e.code == "ArrowUp" && speedY != 1) {
+                // If up arrow key pressed with this condition...
+                // snake will not move in the opposite direction
+                speedX = 0;
+                speedY = -1;
+            } else if (e.code == "ArrowDown" && speedY != -1) {
+                // If down arrow key pressed
+                speedX = 0;
+                speedY = 1;
+            } else if (e.code == "ArrowLeft" && speedX != 1) {
+                // If left arrow key pressed
+                speedX = -1;
+                speedY = 0;
+            } else if (e.code == "ArrowRight" && speedX != -1) {
+                // If right arrow key pressed
+                speedX = 1;
+                speedY = 0;
+            }
+        }
+
+        // Randomly place food
+        function placeFood() {
+            // in x coordinates
+            foodX = Math.floor(Math.random() * total_col) * blockSize;
+
+            // in y coordinates
+            foodY = Math.floor(Math.random() * total_row) * blockSize;
+        }
+
+        function showGameOverText() {
+            const gameOverText = document.getElementById('gameOverText');
+            gameOverText.style.display = 'block';
+        }
+
+        function startGame() {
+            snakeX = blockSize * 5;
+            snakeY = blockSize * 5;
+            speedX = 0;
+            speedY = 0;
+            snakeBody = [];
+            gameOver = false;
+            placeFood();
+            // document.getElementById("startButton").style.display = "none";
+            document.getElementById("gameOverText").style.display = "none";
+            clearInterval(gameInterval); // Clear any existing intervals
+            gameInterval = setInterval(update, 1000 / 10); // update every 100 milliseconds
+        }
     </script>
 </body>
 
