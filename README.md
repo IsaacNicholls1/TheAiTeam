@@ -91,12 +91,30 @@ Link to deployed and finished site: https://github.com/IsaacNicholls1/TheAiTeam
 
 # Planning #
 
+- We used a resource called Trello, which was a good way to keep a handle on team projects. We could create cards on our workspace that we had, which could then be assigned to people and tasks could be managed and carried out. Below are two examples of the board in use. 
+![Trello1](/assets/images/rdme-image/trello1.png)
+![Trello2](/assets/images/rdme-image/trello2.png)
+![Trello3](/assets/images/rdme-image/trello3.png)
 
+## GitHub project planning
+- We also used the github project board to enter in all our user stories, which could then be assigned and labelled. 
+
+![githubproject](/assets/images/rdme-image/projectboard.png)
+
+## MOSCOW Prioritisation 
+
+- In order to utilise the MOSCOW prioritisation method, we made sure to utilise the project issues board in Github - which gave a very good overview of the issues we had with our user stories and allowed us to organise these and check they had been done as we went along. 
+
+![moscow](/assets/images/rdme-image/moscow.png)
 
 - - - -
 
 # Hackathon Teamwork #
 
+- We had to work as a team during this project, as we had not worked in a hackathon before. This threw up different problems for us, for example we had to spend a long time learning the process of git and github branches on the first day so that we could work effectively together. We overcame this together and after that it all ran smoothly. 
+
+- We also had to make sure we were speaking all the time, so that no ones work was wiped over. To do this we used google chats, which was a very effective tool for keeping up to date with one another quickly. 
+- We also utilised google meet to set up progress meeetings and update of progress.
 
 
 - - - -
@@ -117,10 +135,13 @@ Once the user has clicked the buttonn to navigate to the games pages and entered
 This page features some information to the user about the site, the developers and a cta button at the bottom to return users to the main page in ordere to play our games. 
 
 ## Games Pages
-These are the pages on our site where we wish the user to go
+These are the pages on our site where we wish the user to go - therefore there is a CTA buttonon the homepage to get to these. They are the pages where users will find and play the games they like.
 
 ## Contact page
 This page is a simple contact form page with a header and the chance to get in contact with our site via a contact form. Some information to users is provided above the form, and everything is styled in the same styling as the rest of the site. 
+
+## Privacy Policy and t&c's
+These are essential pages to have, to outline the legal terms and conditions and privacy policy and are styled the same as the rest of the site. 
 
 ## Header and Footer
 The header and footer have been kept the same throughout the site - styled simply with the same font from Font awesome and the spacing and colours all the same. 
@@ -220,12 +241,12 @@ The following HTML snippet is used to include a placeholder for the footer conte
  - Inspired by https://coolors.co/16084a-141414-eef0f2-ffa90a-c270b0
 
  **Coolers**
-![Colours](/assets/images/)
+![Colours](/assets/images/rdme-image/coolercolorscheme.png)
  
  ##  Fonts
  - The font that we used was PressStart2p - We wanted to focus on what the font would have looked like on the old style arcade machine, quite pixelated and therefore we recreated that.  
 
- ![Font](/assets/images/)
+ ![Font](/assets/images/rdme-image/googlefont.png)
  
  ## Wireframes
 
@@ -255,7 +276,10 @@ The following HTML snippet is used to include a placeholder for the footer conte
 
 <hr>
 <p><a href="#contents">Back To Top</a></p>
+
 - - - -
+
+
 # Testing #
 
 ## HTML Validation
@@ -319,46 +343,74 @@ We tested our site vs the user stories:
 
 1. 
 User Story:
-![User story](/assets/images/rdme-img/userstories1.png)
+![User story](/assets/images/rdme-image/userstories/userstory1.png)
 Site Example:
-![Site Example](/assets/images/rdme-img/userstories1done.png)
+![Site Example](/assets/images/rdme-img)
 --
 2. 
 User Story:
-![User story](/assets/images/rdme-img/userstories2.png)
+![User story](/assets/images/rdme-image/userstories/userstory2.png)
 Site Example:
-![Site Example](/assets/images/rdme-img/userstories2done.png)
+![Site Example](/assets/images/)
 --
 3.
 User Story:
-![User story](/assets/images/rdme-img/userstory3.png)
+![User story](/assets/images/rdme-image/userstories/userstory3.png)
 Site Example:
-![Site Example](/assets/images/rdme-img/userstory3done.png)
+![Site Example](/assets/images/)
 --
 4.
 User Story:
-![User story](/assets/images/rdme-img/userstory4.png)
+![User story](/assets/images/rdme-image/userstories/userstory4.png)
 Site Example:
-![Site Example](/assets/images/rdme-img/userstory4done.png)
+![Site Example](/assets/images/rdme-img)
 --
 5. 
 User Story:
-![User story](/assets/images/rdme-img/userstory5.png)
+![User story](/assets/images/rdme-image/userstories/userstory5.png)
 Site Example:
-![Site Example](/assets/images/rdme-img/userstory5done.png)
+![Site Example](/assets/images/rdme-img)
 --
 6.
 User Story:
-![User story](/assets/images/rdme-img/userstory6.png)
+![User story](/assets/images/rdme-image/userstories/userstory6.png)
 Site Example:
-![Site Example](/assets/images/rdme-img/userstory6done.png)
+![Site Example](/assets/images)
 --
 7.
 
 User Story:
-![User story](/assets/images/rdme-img/userstory7.png)
+![User story](/assets/images/rdme-image/userstories/userstory7.png)
 Site Example:
-![Site Example](/assets/images/rdme-img/userstory7done.png)
+![Site Example](/assets/images)
+
+7.
+
+User Story:
+![User story](/assets/images/rdme-image/userstories/userstory7.png)
+Site Example:
+![Site Example](/assets/images)
+
+8.
+
+User Story:
+![User story](/assets/images/rdme-image/userstories/userstory9.png)
+Site Example:
+![Site Example](/assets/images)
+
+9.
+
+User Story:
+![User story](/assets/images/rdme-image/userstories/userstory10.png)
+Site Example:
+![Site Example](/assets/images)
+
+10.
+
+User Story:
+![User story](/assets/images/rdme-image/userstories/userstory11.png)
+Site Example:
+![Site Example](/assets/images)
 
 <hr>
 <p><a href="#contents">Back To Top</a></p>
@@ -371,39 +423,40 @@ Site Example:
 ### Nav bar dropdown shifting to the right hand side on smaller devices
 
 - On smaller devices, in the connect.html and index.html pages the navbar burger logo to indicate the nav bar would switch sides and throw everything on there out of line.
-- To fix this issue, I checked the code in the other pages and texted them wjhere it worked fine. The issue was due to the logo which i had in the first pages. I copied across the code, resized the logo and this worked. 
+- To fix this issue, we checked the code in the other pages and texted them where it worked fine. The issue was due to the logo which we had in the first pages. we copied across the code, resized the logo and this worked.
+- Other bugs we encountered where that pages took us to different links, which we fixed by including then correct page link and making sure this worked on the deployed version of the site.  
 
-### Images resizing on smaller devices
+### Other issue/bug
 
-- The cards resized poorly when on smaller devices, meaning the images went out of shape and were hard to view. 
-- To fix this issue, I looked into the code and the bootstrap 5 container system, i edited them so that they would fill the screen on smaller devices and drop down below one another. 
-
-### Cards seeming too large on page
-
-- The cards and images inside them were originally 2 across the page with 2 below. I found that while testing this was not condusive to a good UX as they seemed too large. 
-- To fix this issue I made sure that the cards were smaller and all on one line of the page, meaning that the user could more easily see and navigate the page, and it was a calmer experience. 
+- 
 
 ### Poor Font for User
 
-- When deploying and testing the site I found that the font that was being used was not a good fit for the User. It was too clinical and i felt it needed a rounder and calmer font. To fix this i did some more research and found that a good fit was the Poppins font. 
+- We felt that the font had to be just right for the website feel and the user, and after some testing we found the perfect one which was not our first option.  
 
-- This was an issue which was ongoing through my project - It was tricky to get the images to be the correct size for my cards. They would either bee too small/big, or not the same size as others. 
-- To fix this issue originally I spoke with Roo, who guided me to try using max height for the images, however i then found that when on smaller devices the images stretched out of shape. 
-- I then fixed this further by resizing and shaping all of the images in question so that they fitted well into the cards. 
+### Other bugs
+
+- We felt that the font had to be just right for the website feel and the user, and after some testing we found the perfect one which was not our first option. 
+
+
 
 ## During development and testing, these are the current bugs:
 
-### Images too large 
+### Images  
 
-- Some of the images are still too large - generating a lower lighthouse score than i would have liked. 
+- Some of the images are still too large - generating a lower lighthouse score than we would have liked. 
 
 ### Unknown code fixes in lighthouse
 
-- There are some errors/warnings in lighthouse which would improve the score. These are things that i am currently not sure how to fix so this will be something to ask/research before my next project. 
+- There are some errors/warnings in lighthouse which would improve the score. We will research these before the next project and make sure to find out how to fix them. 
 
 <hr>
 <p><a href="#contents">Back To Top</a></p>
+
+
 - - - -
+
+
 # Deployment #
 
 How I deployed this site : 
@@ -416,7 +469,7 @@ How I deployed this site :
 - The live link is here: https://github.com/IsaacNicholls1/TheAiTeam
 
 - I used an agile methodology by using early deployment, I made sure the project was deployed after the first few pages were created. This ensured that I could see every change on a live site, which greatly aided the coding and development process.
-![Site Example](/assets/images/rdme-img)
+![Site Example](/assets/images/rdme-image/earlydeployment.png)
 ![Site Example](/assets/images/rdme-img)
 
 <hr>
@@ -434,34 +487,28 @@ How I deployed this site :
 
 ### Frameworks, Libraries & Programs Used
 
-1. [Bootstrap 4.4.1:](https://getbootstrap.com/docs/4.4/getting-started/introduction/ "‌")
+1. [Bootstrap 4.4.1:](https://getbootstrap.com/docs/4.4/getting-started/introduction/)
    - Bootstrap was used to assist with the responsiveness and styling of the website.
-2. [Hover.css:](https://ianlunn.github.io/Hover/ "‌")
-   - Hover.css was used on the Social Media icons in the footer to add the float transition while being hovered over.
-3. [Google Fonts:](https://fonts.google.com/specimen/Press+Start+2P?selection.family=Monoton|Orbitron:wght@400..900|Press+Start+2P|VT323)
+2. [Google Fonts:](https://fonts.google.com/specimen/Press+Start+2P?selection.family=Monoton|Orbitron:wght@400..900|Press+Start+2P|VT323)
    - Google fonts were used to import the PressStart2p font into the style.css file which is used on all pages throughout the project.
-4. [Font Awesome:](https://fontawesome.com/)
+3. [Font Awesome:](https://fontawesome.com/)
    - Font Awesome was used on all pages throughout the website to add icons for aesthetic and UX purposes.
-5. [jQuery:](https://jquery.com/ "‌")
+4. [jQuery:](https://jquery.com/)
    - jQuery came with Bootstrap to make the navbar responsive but was also used for the smooth scroll function in JavaScript.
-6. [Git](https://git-scm.com/ "‌")
+5. [Git](https://git-scm.com/)
    - Git was used for version control by utilizing the Gitpod terminal to commit to Git and Push to GitHub.
 7. [GitHub:](https://github.com/IsaacNicholls1/TheAiTeam)
    - GitHub is used to store the projects code after being pushed from Git.
-8. [Photoshop:](https://www.adobe.com/ie/products/photoshop.html "‌")
+8. [Photoshop:](https://www.adobe.com/ie/products/photoshop.html)
    - Photoshop was used for resizing images and editing photos for the website.
-9. [Balsamiq:](https://balsamiq.com/ "‌")
+9. [Balsamiq:](https://balsamiq.com/)
    - Balsamiq was used to create the wireframes during the design process.
 
 ## Media
- - The images that were used throughout the project were all used from the site https://www.pexels.com/ 
- - The following photos were used in the content: [Content Section sources](https://github.com/IsaacNicholls1/MH-P1-IsaacN/tree/main/assets/images)
+ - The images that were used throughout the project were mostly developed by Paul using photoshop, and images from different sources.  
+ - The following photos were used in the content: (https://github.com/IsaacNicholls1/TheAiTeam/tree/main/assets/images)
  - Some images were edited with Photoshop - this was to reduce their size and get them the correct shape, therefore providing a better UX when visiting the site.
 
-## HomePage Content. 
--  I wanted to keep Homepage content to a minumum as I was aiming for a calm and easy user experience, so i felt that I didnt want to provide over stimulating information to the user. 
--  Text for the homepage was generated using Co-Pilot, but had to be greatly re-fined and rewritted by me for the purpose of the project and specific user. 
-- I used sites such as https://www.mind.org.uk/need-urgent-help/using-this-tool/ and https://www.nhs.uk/nhs-services/mental-health-services/ to generate information and text ideas. 
 
 ## Content
 - The colour scheme was helped with the use of: https://coolors.co - I went through a bit of testing with my different colours as the first ones I used i was not happy with, as they did not seem to suit the calm user experience that i was aiming for and were too bold. This led me to choosing the specific color palette that i did. 
@@ -471,9 +518,13 @@ How I deployed this site :
 
 ## Code
 - The HTML & CSS uses Bootstrap Version 5.3: https://getbootstrap.com/docs/5.3/getting-started/introduction/ 
-- I used other coding tools and resources such as snippets of code from my previous CI projects to guide and aid me when i needed reminding about the correct way to use the code.
-- I utilised AI in this project in the form of CoPilot. This helped me to create basic HTML structures and to edit parts of code that needed it. I found it very useful overall and saved me a great deal of time, however I found when using, it needed a close eye kept on it as it seems to add in exra closing tags and code that is sometimes not needed. Overall a very useful tool when used in the correct context. 
+- I used other coding tools and resources such as snippets of code from our previous CI projects to guide and aid when we needed reminding about the correct way to use the code.
 
+## Use of AI
+
+- We utilised AI in this project in the form of CoPilot. This helped to create basic HTML structures and to edit parts of code that needed it, to structure and help keep styling the same. I found it very useful overall and saved me a great deal of time, however I found when using, it needed a close eye kept on it as it sometimes adds in extra closing tags and code that is sometimes not needed. 
+
+- It was used in the creating of some of the Javascript sections, and also to create ontent for the privacy policy and Terms and Conditions sections. 
 
 # Future features #
 - If we had more time, we would have liked to add in an additional feature for the games, which would have been able to show the score of the player in relation to the top and highest scores of others as a leaderboard, for each game. 
