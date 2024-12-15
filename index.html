@@ -14,12 +14,53 @@
             border-radius: 0;
             border: 0;
         }
-    </style>
 
+        .coin {
+            position: absolute;
+            top: -50px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 150px;
+            height: 150px;
+            background-image: url("assets/images/coin-silver.png");
+            background-size: cover;
+            display: none;
+        }
+
+        @keyframes fall {
+            0% {
+                top: -50px;
+            }
+
+            100% {
+                top: calc(80vh - 50px);
+            }
+        }
+
+        .modal-fullscreen {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            max-width: none;
+        }
+
+        .modal-content {
+            height: 100%;
+            background-color: black;
+        }
+
+        body,
+        footer,
+        header,
+        nav {
+            background-color: #212529;
+            color: #fff;
+        }
+    </style>
 </head>
 
 <body data-bs-theme="dark">
-
     <!-- nav bar -->
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
@@ -64,9 +105,6 @@
             class="container h-100 d-flex flex-column justify-content-center align-items-center text-center text-white hero-image py-5">
             <h1 class="mb-4">The Arcade</h1>
             <h2>Relax and destress by blasting aliens and overfeeding reptiles!</h2>
-            <div class="pt-3" id="hero-buttons">
-                <a href="games.html" class="btn btn-primary me-2">Visit the Arcade</a>
-            </div>
         </div>
     </section>
 
@@ -82,8 +120,11 @@
                     <div class="card-body">
                         <h3 class="card-title">Space Invaders</h3>
                         <p class="card-text">Play the original and classic game of Space Invaders. Kill aliens right
-                            here!</p>
-                        <a href="space-invaders.html" class="btn btn-primary">Play Now</a>
+
+                          here!</p>
+                        <a href="space-invaders.html" onclick="dropCoinInModal(event, 'space-invaders.html')" class="btn btn-primary coinSound">Play Now</a>
+                    
+
                     </div>
                 </div>
             </div>
@@ -91,10 +132,13 @@
                 <div class="card mb-3">
                     <img src="assets/images/snake.jpg" class="card-img-top" alt="Snake">
                     <div class="card-body">
+
                         <h3 class="card-title">Snake</h3>
                         <p class="card-text">Play this arcade favourite in all it's 8-bit glory. Overfeed that greedy
                             reptile for fun!</p>
-                        <a href="snake.html" class="btn btn-primary">Play Now</a>
+                        <a href="snake.html" onclick="dropCoinInModal(event, 'snake.html')" class="btn btn-primary coinSound">Play Now</a>
+             
+
                     </div>
                 </div>
             </div>
@@ -102,9 +146,12 @@
                 <div class="card mb-3">
                     <img src="assets/images/pac-man.jpg" class="card-img-top" alt="Pac Man">
                     <div class="card-body">
+
                         <h3 class="card-title">Pac Man</h3>
                         <p class="card-text">Avoid ghosts and munch as many power pills as you can before you fade away!</p>
-                        <a href="pac-man.html" class="btn btn-primary">Play Now</a>
+                        <a href="pac-man.html" onclick="dropCoinInModal(event, 'space-invaders.html')" class="btn btn-primary coinSound">Play Now</a>
+
+
                     </div>
                 </div>
             </div>
@@ -134,29 +181,75 @@
             <div class="text-center">
                 <div class="py-3">
                     <h2>Join The Arcade for FREE Games</h2>
-                    <p>Sign up and we will send the latest games direct to your inbox just when you need to kill
-                        something most!</p>
-                    <a href="#" class="btn btn-primary">Join now</a>
+                    <p>Sign up and we will send the latest games direct to your inbox!</p>
+                    <a href="contact.html" class="btn btn-primary">Join us!</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- footer -->
-    <footer id="footer" class="mt-auto py-5 bg-dark text-white">
-        <div class="container">
-            <div class="row">
-                <div class="col text-center">
-                    <span>&copy; 2024 The Arcade</span>&nbsp; &nbsp;|&nbsp; &nbsp;<a href="privacy-policy.html"
-                        class="text-white">Privacy Policy</a>&nbsp; &nbsp;|&nbsp; &nbsp;<a href="terms-conditions.html"
-                        class="text-white">Terms & Conditions</a>
+
+     <!-- footer -->
+     <footer>
+        <div id="footer-placeholder"></div>
+    </footer>
+
+    <!-- coin image -->
+    <div class="coin" id="coin"></div>
+
+    <!-- Audio Element -->
+    <audio id="coinSound" src="assets/sounds/insert-coin.wav" preload="auto"></audio>
+
+    <!-- Modal for the coin-->
+    <div class="modal fade" id="coinModal" tabindex="-1" aria-labelledby="coinModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-fullscreen">
+            <div class="modal-content">
+                <div class="modal-body d-flex justify-content-center align-items-center">
+                    <img src="assets/images/press-enter.webp" alt="Press Enter" class="img-fluid" />
+                    <div class="coin" id="modalCoin"></div>
+
                 </div>
             </div>
         </div>
-    </footer>
+    </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        function dropCoinInModal(event, url) {
+            event.preventDefault();
+            const modalCoin = document.getElementById("modalCoin");
+            const coinModal = new bootstrap.Modal(
+                document.getElementById("coinModal")
+            );
+            coinModal.show();
+            modalCoin.style.display = "block";
+            modalCoin.style.animation = "fall 2s linear forwards"; // Animate the coin falling
+            setTimeout(() => {
+                modalCoin.style.display = "none";
+                coinModal.hide();
+                window.location.href = url;
+            }, 2000); // Delay navigation for 4 seconds to match the animation duration
+        }
 
+        document.querySelectorAll('.coinSound').forEach(item => {
+            item.addEventListener('click', () => {
+                const audio = document.getElementById('coinSound');
+                audio.currentTime = 0; // Rewind to the start
+                audio.play();
+            });
+        });
+
+         // Function to load the footer
+         function loadFooter() {
+            fetch('includes/footer.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('footer-placeholder').innerHTML = data;
+                });
+        }
+
+        loadFooter();
+    </script>
 </body>
 
 </html>
