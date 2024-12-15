@@ -53,17 +53,96 @@
     </style>
 </head>
 
-<body>    
-    <div class="container">
-        <div class=" col-md-12 text-center nes-container with-title is-centered">
-            <p class="title">Snake Game</p>
-            <p>Use Arrow keys to move the snake</p>
-            <p>Press Start Game to start the game</p>
-            <canvas id="board"></canvas>
-            <button id="startButton" class="btn btn-primary start-button">Start Game</button>    
-            <div id="gameOverText" class="game-over">Game Over</div>
+
+<body data-bs-theme="dark">
+
+    <!-- nav bar -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">The Arcade</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="games.html" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Games
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="snake.html">Snake</a></li>
+                            <li><a class="dropdown-item" href="space-invaders.html">Space Invaders</a></li>
+                            <li><a class="dropdown-item" href="pac-man.html">Pac Man</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
         </div>
-    </div>
+    </nav>
+
+    <!-- game placeholder -->
+    <section id="game-placeholder">
+        <div class="container my-3" style="border: 10px solid green;">
+            <div class="row" style="background-image: url('assets/images/snake-head.jpg'); background-size: cover; background-position: center;">
+                <div class="col text-center"style="height: 250px;"></div>
+            </div>
+            <div class="container">
+              <div class=" col-md-12 text-center nes-container with-title is-centered">
+                <p class="title">Snake Game</p>
+                <p>Use Arrow keys to move the snake</p>
+                <p>Press Start Game to start the game</p>
+                <canvas id="board"></canvas>
+                <button id="startButton" class="btn btn-primary start-button">Start Game</button>    
+                <div id="gameOverText" class="game-over">Game Over</div>
+              </div>
+            </div>
+          
+                
+            <div class="row" style="background-image: url('assets/images/coin-slot.jpg'); background-size: cover; background-position: center;">
+                <div class="col text-center"style="height: 250px;"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- cta -->
+    <section style="background-image: url('assets/images/the-arcade-hero.jpg'); background-size: cover; background-position: center;">
+        <!-- <section id="action" class="py-5" style="background-color: #333;"> -->
+        <div class="container">
+            <div class="text-center">
+                <div class="py-3">
+                    <h2>Join The Arcade for FREE Games</h2>
+                    <p>Sign up and we will send the latest games direct to your inbox just when you need to kill
+                        something most!</p>
+                    <a href="#" class="btn btn-primary">Join now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- footer -->
+    <footer id="footer" class="mt-auto py-5 bg-dark text-white">
+        <div class="container">
+            <div class="row">
+                <div class="col text-center">
+                    <span>&copy; 2024 The Arcade</span>&nbsp; &nbsp;|&nbsp; &nbsp;
+                    <a href="privacy-policy.html" class="text-white">Privacy Policy</a>&nbsp; &nbsp;|&nbsp; &nbsp;<a
+                        href="terms-conditions.html" class="text-white">Terms & Conditions</a>
+                </div>
+            </div>
+
+
     
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
