@@ -257,22 +257,22 @@ The following HTML snippet is used to include a placeholder for the footer conte
   - Home Page Wireframe
 
   **Home Page Wireframe**
-![Home Wireframe](/assets/images)
+![Home Wireframe](/assets/images/rdme-image/wireframe/HomePage.png)
 
  **About Page Wireframe**
-![About Wireframe](/assets/images)
+![About Wireframe](/assets/images/rdme-image/wireframe/AboutPage.png)
 
 **Space Invaders Game Page Wireframe**
-![SI Wireframe](/assets/images)
+![SI Wireframe](/assets/images/rdme-image/wireframe/siwireframe.png)
 
 **Snake Game Page Wireframe**
-![Snake Wireframe](/assets/images)
+![Snake Wireframe](/assets/images/rdme-image/wireframe/Snakegamepage.png)
 
 **Pac-man Game Page Wireframe**
-![Pacman Wireframe](/assets/images)
+![Pacman Wireframe](/assets/images/rdme-image/wireframe/pacmangamepage.png)
   
 **Contact Page Wireframe**
-![Contact Wireframe](/assets/images)
+![Contact Wireframe](/assets/images/rdme-image/wireframe/ContactFormPage.png)
 
 <hr>
 <p><a href="#contents">Back To Top</a></p>
@@ -343,74 +343,59 @@ We tested our site vs the user stories:
 
 1. 
 User Story:
-![User story](/assets/images/rdme-image/userstories/userstory1.png)
-Site Example:
-![Site Example](/assets/images/rdme-img)
+![User story](/assets/images/rdme-image/userstories/userstory1done.png)
+
 --
 2. 
 User Story:
-![User story](/assets/images/rdme-image/userstories/userstory2.png)
-Site Example:
-![Site Example](/assets/images/)
+![User story](/assets/images/rdme-image/userstories/userstory2done.png)
 --
 3.
 User Story:
-![User story](/assets/images/rdme-image/userstories/userstory3.png)
-Site Example:
-![Site Example](/assets/images/)
+![User story](/assets/images/rdme-image/userstories/)
+
 --
 4.
 User Story:
-![User story](/assets/images/rdme-image/userstories/userstory4.png)
-Site Example:
-![Site Example](/assets/images/rdme-img)
+![User story](/assets/images/rdme-image/userstories/userstory4done.png)
 --
 5. 
 User Story:
-![User story](/assets/images/rdme-image/userstories/userstory5.png)
-Site Example:
-![Site Example](/assets/images/rdme-img)
+![User story](/assets/images/rdme-image/userstories/userstory5done.png)
+
 --
 6.
 User Story:
-![User story](/assets/images/rdme-image/userstories/userstory6.png)
-Site Example:
-![Site Example](/assets/images)
+![User story](/assets/images/rdme-image/userstories/userstory6done.png)
 --
 7.
 
 User Story:
-![User story](/assets/images/rdme-image/userstories/userstory7.png)
-Site Example:
-![Site Example](/assets/images)
+![User story](/assets/images/rdme-image/userstories/)
 
-7.
-
-User Story:
-![User story](/assets/images/rdme-image/userstories/userstory7.png)
-Site Example:
-![Site Example](/assets/images)
 
 8.
 
 User Story:
-![User story](/assets/images/rdme-image/userstories/userstory9.png)
-Site Example:
-![Site Example](/assets/images)
+![User story](/assets/images/rdme-image/userstories/)
+
 
 9.
 
 User Story:
-![User story](/assets/images/rdme-image/userstories/userstory10.png)
-Site Example:
-![Site Example](/assets/images)
+![User story](/assets/images/rdme-image/userstories/userstory9done.png)
+
 
 10.
 
 User Story:
-![User story](/assets/images/rdme-image/userstories/userstory11.png)
-Site Example:
-![Site Example](/assets/images)
+![User story](/assets/images/rdme-image/userstories/)
+
+11.
+
+User Story:
+![User story](/assets/images/rdme-image/userstories/userstory11done.png)
+
 
 <hr>
 <p><a href="#contents">Back To Top</a></p>
@@ -470,7 +455,6 @@ How I deployed this site :
 
 - I used an agile methodology by using early deployment, I made sure the project was deployed after the first few pages were created. This ensured that I could see every change on a live site, which greatly aided the coding and development process.
 ![Site Example](/assets/images/rdme-image/earlydeployment.png)
-![Site Example](/assets/images/rdme-img)
 
 <hr>
 <p><a href="#contents">Back To Top</a></p>
@@ -511,20 +495,28 @@ How I deployed this site :
 
 
 ## Content
-- The colour scheme was helped with the use of: https://coolors.co - I went through a bit of testing with my different colours as the first ones I used i was not happy with, as they did not seem to suit the calm user experience that i was aiming for and were too bold. This led me to choosing the specific color palette that i did. 
-- The fonts were imported from Google Fonts. Originally I selected a font of Roboto sans, but it didnt not load properly and when it did, after testing the site i decided that it was not the correct font for my target audience. I eventually then tested some fonts and after some research decided on the font Poppins. 
 - Font awesome was used to add icons for UX purposes auch as social media icons. 
-- Balsamiq was used to create the wireframes during the design process, as this was the first time of using the tool it took a bit of getting used to and developing these. I tweaked them as i went along and made slight changes to my actual site. 
+- Balsamiq was used to create the wireframes during the design process, as this was the second time of using the tool it took a bit of getting used to and developing these. We tweaked them as i went along and made slight changes to the actual site. 
 
 ## Code
 - The HTML & CSS uses Bootstrap Version 5.3: https://getbootstrap.com/docs/5.3/getting-started/introduction/ 
 - I used other coding tools and resources such as snippets of code from our previous CI projects to guide and aid when we needed reminding about the correct way to use the code.
+- The following sites were used for examples of code for the games, and the stars hero image. 
+- SITES USED HERE
+- Pexels was used to get some photos. 
 
 ## Use of AI
 
 - We utilised AI in this project in the form of CoPilot. This helped to create basic HTML structures and to edit parts of code that needed it, to structure and help keep styling the same. I found it very useful overall and saved me a great deal of time, however I found when using, it needed a close eye kept on it as it sometimes adds in extra closing tags and code that is sometimes not needed. 
 
 - It was used in the creating of some of the Javascript sections, and also to create ontent for the privacy policy and Terms and Conditions sections. 
+
+# Other issues #
+
+- Another issue faced was within Github - where we had a merge conflict at one point. 
+- ![github conflict](/assets/images/rdme-image/mergeconflict.png)
+- This meant that the Project lead needed to go into github and find the problem. Then to research how to solve the problem in Github as this was a new issue. The site that was very useful for this was https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/addressing-merge-conflicts/resolving-a-merge-conflict-on-github
+- This helped to explain the merge conflicts and how to resolve the issue, which was then implemented and the issue fixed.  
 
 # Future features #
 - If we had more time, we would have liked to add in an additional feature for the games, which would have been able to show the score of the player in relation to the top and highest scores of others as a leaderboard, for each game. 
