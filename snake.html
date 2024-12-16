@@ -55,162 +55,80 @@
             display: none;
         }
 
-
         /**
         * Hero Header
         */
 
-        *{
+        *{            
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            user-select: none;
+            scroll-behavior: smooth;
+            transition: 0.5s ease-in;
+        }
+        :root{
+            --primary-color: #fcf704;
+            --secondary-color:#ccc;
+            /* --bg-color:#101010; */
+            --bg-color: blue;
+            --smoke:whitesmoke;
+        }
+
+        .hero-header-title-block {
+            /* background-color: var(--bg-color); */
+            /* background-color: blue; */
+            flex: 3;
+            /* padding: 10px 10px 20px 10px; */
+            text-align: center;
+            border: 1px solid darkslategrey;
+        }
+        .hero-header-title-block .headline{
+            margin-top: 0px;
+            /* font-family: 'Metal Mania', cursive; */    
+            font-size: 3.9rem;
+            letter-spacing: 1px;
+            color: var(--primary-color);
+            animation-name:text-glow;
+            animation-duration: 1s;
+            animation-iteration-count: infinite;
+            padding: 1px;
+        }
+        @keyframes text-glow {
+            0% {text-shadow: 1px 1px 7px #FF0000;}
+            15% {text-shadow: 2px 2px 8px #FF0000;}
+            25% {text-shadow: 4px 4px 9px #FF0000;}
+            50% {text-shadow: 6px 6px 9px #FF0000;}
+            75% {text-shadow: 4px 4px 8px #FF0000;}
+            100% {text-shadow: 1px 1px 7px #FF0000;}
             
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    user-select: none;
-    scroll-behavior: smooth;
-    transition: 0.5s ease-in;
-}
-:root{
-    --primary-color: #fcf704;
-    --secondary-color:#ccc;
-    /* --bg-color:#101010; */
-    --bg-color: blue;
-    --smoke:whitesmoke;
-}
-/* aside{
-    margin: 0px 0;
-    color: var(--primary-color);
-    font-style: italic;
-    font-weight: 300;
-    font-size: 1.2em;
-    text-shadow: 2px 2px 8px #FF0000;
-} */
-/* p{
-    font-family: 'Josefin Sans', sans-serif;
-    font-weight: 400;
-    line-height: 1.5;
-} */
-/* figure{
-    margin: 10px 0;
-    position: relative;
-    border: 2px solid var(--primary-color);
-    background-color: var(--bg-color);
-} */
-/* figcaption{
-    position: absolute;
-    bottom: 10px;
-    left: 10px;
-    font-family: 'Josefin Sans', sans-serif;
-    font-weight: 100;
-    font-style: italic;
-    color: var(--primary-color);
-} */
-/* article .first:first-of-type:first-letter{
-    color: var(--primary-color);
-	float: left;
-	font-size: 3em;
-	line-height: 1;
-    margin-right: 0.1em;
-}  */
-/* .page-one{
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-} */
-/* .hero-header-img{
-    background: url("https://assets.codepen.io/t-1/element5-digital-dwcC-OJ-bRs-unsplash.jpg"); 
- background-size: cover;
-    background-repeat: no-repeat;
-    background-position:top;
-    flex: 2; 
-} */
-/* .article-meta{
-    margin:50px 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    color: var(--secondary-color);
-} */
-/* .article-tags{
-    margin: 10px 0;
-} */
-/* .article-tags .tag{
-    background-color: dodgerblue;
-    padding: 4px;
-    border-radius: 10px;
-    padding: 5px;
-    font-weight: 300;
-} */
-/* .catogs{
-    background-color: crimson !important;
-} */
-/* .featured{
-    background-color: teal!important;
-} */
-/* hr{
-    border: none; 
-	background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/5175/hr-01.png') no-repeat center;
-	height: 40px;
-	margin: 4em 0; 
-} */
+        }
+        .hero-header-title-block .headline span{
+            color: var(--smoke);
+            font-size: 1.4rem;
+        }
+        .hero-header-title-block .subhead{
+            font-family: 'Josefin Sans', sans-serif;
+            font-weight: 400;
+            font-style: italic;
+            color: var(--smoke);
+            animation-name:text-glow;
+            animation-duration: 1s;
+            animation-iteration-count: infinite;
+        }
 
+        .hero-header-title-block article{
+            text-align: justify;
+            column-width: 14em;
+            column-gap: 1.33em;
+            padding: 0 1em;
+            color: var(--secondary-color);
+        }
 
-
-
-.hero-header-title-block {
-    /* background-color: var(--bg-color); */
-    /* background-color: blue; */
-    flex: 3;
-    /* padding: 10px 10px 20px 10px; */
-    text-align: center;
-    border: 1px solid darkslategrey;
-}
-.hero-header-title-block .headline{
-    margin-top: 0px;
-    /* font-family: 'Metal Mania', cursive; */    
-    font-size: 3.9rem;
-    letter-spacing: 1px;
-    color: var(--primary-color);
-    animation-name:text-glow;
-    animation-duration: 1s;
-    animation-iteration-count: infinite;
-    padding: 1px;
-}
-@keyframes text-glow {
-    0% {text-shadow: 1px 1px 7px #FF0000;}
-    15% {text-shadow: 2px 2px 8px #FF0000;}
-    25% {text-shadow: 4px 4px 9px #FF0000;}
-    50% {text-shadow: 6px 6px 9px #FF0000;}
-    75% {text-shadow: 4px 4px 8px #FF0000;}
-    100% {text-shadow: 1px 1px 7px #FF0000;}
-    
-}
-.hero-header-title-block .headline span{
-    color: var(--smoke);
-    font-size: 1.4rem;
-}
-.hero-header-title-block .subhead{
-    font-family: 'Josefin Sans', sans-serif;
-    font-weight: 400;
-    font-style: italic;
-    color: var(--smoke);
-    animation-name:text-glow;
-    animation-duration: 1s;
-    animation-iteration-count: infinite;
-}
-
-.hero-header-title-block article{
-    text-align: justify;
-    column-width: 14em;
-	column-gap: 1.33em;
-	padding: 0 1em;
-    color: var(--secondary-color);
-}
-
-.hero-header-title-block {
-    background-color: green;
-    border: 6px solid darkslategrey;
-}
+        .hero-header-title-block {
+            background-color: green;
+            border: 6px solid darkslategrey;
+        }
 
     </style>
 </head>
@@ -222,9 +140,8 @@
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">The Arcade</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -256,50 +173,20 @@
 
     <!-- game placeholder -->
     <section id="game-placeholder">
-        <div class="container my-3 col-12 col-md-6">
-            <!-- <div class="row" style="background-image: url('assets/images/snake-head.jpg'); background-size: cover; background-position: center;">
-                    <div class="col text-center"style="height: 250px;">
-                        Header image
-                    </div>
-                </div> -->
-    
+        <div class="container my-3 col-12 col-md-6">    
             <div class="hero-header-title-block p2-4">
                 <h1 class="headline">The Arcade <span></span></h1>
-                <!-- <image src="assets/images/snakes.png" alt="snake-head" class="img-fluid" width="180px" height="auto"> -->
-                <!-- <img src="assets/images/snake-pit-48342.jpg" alt="snake-head" class="img-fluid w-100 h-100" style="object-fit: cover; padding: 0px; "> -->
-            </div>
-    
+            </div>    
             <div class="container" style="background-color: black;">
                 <div class="col-md-12 text-center nes-container with-title is-centered">
-                    <!-- <p class="title">Snake Game</p> -->
-                    <!-- <p>Use Arrow keys to move the snake</p>
-                    <p>Press Start Game to start the game</p> -->
                     <canvas id="board"></canvas>
                     <button id="startButton" class="btn btn-primary start-button">Start Game</button>
                     <div id="gameOverText" class="game-over">Game Over</div>
                 </div>
             </div>
-            <!-- <div class="row" style="background-image: url('assets/images/coin-slot.jpg'); background-size: cover; background-position: center;">
-                    <div class="col text-center"style="height: 250px;"></div>
-                </div> -->
         </div>
     </section>
-
-    <!-- cta -->
-    <!-- <section style="background-image: url('assets/images/the-arcade-hero.jpg'); background-size: cover; background-position: center;">
-         <section id="action" class="py-5" style="background-color: #333;"> 
-        <div class="container">
-            <div class="text-center">
-                <div class="py-3">
-                    <h2>Join The Arcade for FREE Games</h2>
-                    <p>Sign up and we will send the latest games direct to your inbox just when you need to kill
-                        something most!</p>
-                    <a href="#" class="btn btn-primary">Join now</a>
-                </div>
-            </div>
-        </div>
-    </section>-->
-
+    
     <!-- footer -->
     <footer id="footer" class="mt-auto py-5 bg-dark text-white">
         <div class="container">
@@ -310,11 +197,10 @@
                         href="terms-conditions.html" class="text-white">Terms & Conditions</a>
                 </div>
             </div>
+        </div>
+    </footer>
 
-
-    
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script>
         let blockSize = 25;
         let total_row = 17; // total row number
@@ -412,6 +298,7 @@
 
         // Movement of the Snake - We are using addEventListener
         function changeDirection(e) {
+            e.preventDefault(); // Prevent default behavior for arrow keys
             if (e.code == "ArrowUp" && speedY != 1) {
                 // If up arrow key pressed with this condition...
                 // snake will not move in the opposite direction
