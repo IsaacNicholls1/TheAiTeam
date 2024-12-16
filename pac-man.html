@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snake Game</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+    <link href="https://unpkg.com/nes.css/css/nes.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Metal+Mania&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;300;400;500&display=swap');
+        body {
+            text-align: center;
+            background: url('./assets/images/arcade-room.jpg') no-repeat center center fixed;
+            background-size: cover;
+        }
+
+        .geeks {
+            font-size: 40px;
+            font-weight: bold;
+            color: green;
+        }
+
+        #board {
+            background-color: #333;
+            display: block;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .start-button {
+            margin-top: 20px;
+        }
+
+        .game-over {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: red;
+            font-size: 25px;
+            font-family: 'Press Start 2P', cursive;
+            display: none;
+        }
+        .game-over-press {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: red;
+            font-size: 10px;
+            font-family: 'Press Start 2P', cursive;
+            display: none;
+        }
+
+        /**
+        * Hero Header
+        */
+
+        *{            
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            user-select: none;
+            scroll-behavior: smooth;
+            transition: 0.5s ease-in;
+        }
+        :root{
+            --primary-color: #fcf704;
+            --secondary-color:#ccc;
+            /* --bg-color:#101010; */
+            --bg-color: blue;
+            --smoke:whitesmoke;
+        }
+
+        .hero-header-title-block {
+            /* background-color: var(--bg-color); */
+            /* background-color: blue; */
+            flex: 3;
+            /* padding: 10px 10px 20px 10px; */
+            text-align: center;
+            border: 1px solid darkslategrey;
+        }
+        .hero-header-title-block .headline{
+            margin-top: 0px;
+            /* font-family: 'Metal Mania', cursive; */    
+            font-size: 3.9rem;
+            letter-spacing: 1px;
+            color: var(--primary-color);
+            animation-name:text-glow;
+            animation-duration: 1s;
+            animation-iteration-count: infinite;
+            padding: 1px;
+        }
+        @keyframes text-glow {
+            0% {text-shadow: 1px 1px 7px #FF0000;}
+            15% {text-shadow: 2px 2px 8px #FF0000;}
+            25% {text-shadow: 4px 4px 9px #FF0000;}
+            50% {text-shadow: 6px 6px 9px #FF0000;}
+            75% {text-shadow: 4px 4px 8px #FF0000;}
+            100% {text-shadow: 1px 1px 7px #FF0000;}
+            
+        }
+        .hero-header-title-block .headline span{
+            color: var(--smoke);
+            font-size: 1.4rem;
+        }
+        .hero-header-title-block .subhead{
+            font-family: 'Josefin Sans', sans-serif;
+            font-weight: 400;
+            font-style: italic;
+            color: var(--smoke);
+            animation-name:text-glow;
+            animation-duration: 1s;
+            animation-iteration-count: infinite;
+        }
+
+        .hero-header-title-block article{
+            text-align: justify;
+            column-width: 14em;
+            column-gap: 1.33em;
+            padding: 0 1em;
+            color: var(--secondary-color);
+        }
+
+        .hero-header-title-block {
+            background-color: green;
+            border: 6px solid darkslategrey;
+        }
+
+    </style>
+</head>
+
+
+<body data-bs-theme="dark">
+
+    <!-- nav bar -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">The Arcade</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="games.html" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Games
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item"href="snake.html">Snake</a></li>
+                            <li><a class="dropdown-item" href="space-invaders.html">Space Invaders</a></li>
+                            <li><a class="dropdown-item active" aria-current="page"  href="pac-man.html">Pac Man</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- game placeholder -->
+    <section id="game-placeholder">
+        <div class="container my-3 col-12 col-md-6">    
+            <div class="hero-header-title-block p2-4">
+                <h1 class="headline">The Arcade <span></span></h1>
+            </div>    
+            <div class="container" style="background-color: black;">
+                <div class="col-md-12 text-center nes-container with-title is-centered">
+                  
+                    <p>Add your board game here!</p>
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- footer -->
+    <footer id="footer" class="mt-auto py-5 bg-dark text-white">
+        <div class="container">
+            <div class="row">
+                <div class="col text-center">
+                    <span>&copy; 2024 The Arcade</span>&nbsp; &nbsp;|&nbsp; &nbsp;
+                    <a href="privacy-policy.html" class="text-white">Privacy Policy</a>&nbsp; &nbsp;|&nbsp; &nbsp;<a
+                        href="terms-conditions.html" class="text-white">Terms & Conditions</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        
+    </script>
+</body>
+
+</html>
