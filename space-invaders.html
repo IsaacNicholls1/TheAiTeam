@@ -10,21 +10,145 @@
     <link href="https://unpkg.com/nes.css/css/nes.css" rel="stylesheet">
 
     <style>
-        body {
-            margin: 0;
+        /* body { */
+            /* margin: 0; */
             /* overflow: hidden; */
             /* display: flex; */
-            justify-content: center;
-            align-items: center;
+            /* justify-content: center; */
+            /* align-items: center; */
             /* height: 10vh; */
-            background-color: black;
-        }
-        canvas {
+            /* background-color: black; */
+        /* } */
+        canvas {            
             /* display: block; */
             background-color: white;
             border: 2px solid red;
+            height: 600px;
         }
+        /* <style>
+        @import url('https://fonts.googleapis.com/css2?family=Metal+Mania&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;300;400;500&display=swap'); */
+        body {
+            text-align: center;
+            background: url('./assets/images/arcade-room.jpg') no-repeat center center fixed;
+            background-size: cover;
+        }
+
+        .geeks {
+            font-size: 40px;
+            font-weight: bold;
+            color: green;
+        }
+
+        #board {
+            background-color: #333;
+            display: block;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .start-button {
+            margin-top: 20px;
+        }
+
+        .game-over {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: red;
+            font-size: 25px;
+            font-family: 'Press Start 2P', cursive;
+            display: none;
+        }
+        .game-over-press {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: red;
+            font-size: 10px;
+            font-family: 'Press Start 2P', cursive;
+            display: none;
+        }
+
+        /**
+        * Hero Header
+        */
+
+        *{            
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            user-select: none;
+            scroll-behavior: smooth;
+            transition: 0.5s ease-in;
+        }
+        :root{
+            --primary-color: #fcf704;
+            --secondary-color:#ccc;
+            /* --bg-color:#101010; */
+            --bg-color: blue;
+            --smoke:whitesmoke;
+        }
+
+        .hero-header-title-block {
+            /* background-color: var(--bg-color); */
+            /* background-color: blue; */
+            flex: 3;
+            /* padding: 10px 10px 20px 10px; */
+            text-align: center;
+            border: 1px solid darkslategrey;
+        }
+        .hero-header-title-block .headline{
+            margin-top: 0px;
+            /* font-family: 'Metal Mania', cursive; */    
+            font-size: 3.9rem;
+            letter-spacing: 1px;
+            color: var(--primary-color);
+            animation-name:text-glow;
+            animation-duration: 1s;
+            animation-iteration-count: infinite;
+            padding: 1px;
+        }
+        @keyframes text-glow {
+            0% {text-shadow: 1px 1px 7px #FF0000;}
+            15% {text-shadow: 2px 2px 8px #FF0000;}
+            25% {text-shadow: 4px 4px 9px #FF0000;}
+            50% {text-shadow: 6px 6px 9px #FF0000;}
+            75% {text-shadow: 4px 4px 8px #FF0000;}
+            100% {text-shadow: 1px 1px 7px #FF0000;}
+            
+        }
+        .hero-header-title-block .headline span{
+            color: var(--smoke);
+            font-size: 1.4rem;
+        }
+        .hero-header-title-block .subhead{
+            font-family: 'Josefin Sans', sans-serif;
+            font-weight: 400;
+            font-style: italic;
+            color: var(--smoke);
+            animation-name:text-glow;
+            animation-duration: 1s;
+            animation-iteration-count: infinite;
+        }
+
+        .hero-header-title-block article{
+            text-align: justify;
+            column-width: 14em;
+            column-gap: 1.33em;
+            padding: 0 1em;
+            color: var(--secondary-color);
+        }
+
+        .hero-header-title-block {
+            background-color: green;
+            border: 6px solid darkslategrey;
+        }
+
     </style>
+    
 
 </head>
 
@@ -66,19 +190,35 @@
         </div>
     </nav>
 
-    <section id="game-placeholder">
+     <!-- game placeholder -->
+     <section id="game-placeholder">
+        <div class="container col-12 col-md-6">    
+            <div class="hero-header-title-block mt-3">
+                <h1 class="headline">The Arcade <span></span></h1>
+            </div>    
+            <div class="container" style="background-color: black;">
+                <div class="col-md-12 text-center nes-container with-title is-centered">
+                  
+                    <canvas id="game-canvas"></canvas>
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- <section id="game-placeholder">
         <div class="hero-header-title-block p-0">
             <h1 class="headline">The Arcade <span></span></h1>
         </div>
         <div class="container mb-5 p-5" style="background-color: black;">
             <div class="col-md-122 text-center nes-container is-centered">
-                <!-- <canvas id="game-canvas" width="600" height="600"></canvas> -->
+                <canvas id="game-canvas" width="600" height="600"></canvas> 
                 <canvas id="game-canvas" width="5" height="5"></canvas>
                 
                 
             </div>
         </div>
-    </section>
+    </section> -->
 
 
 
@@ -203,8 +343,8 @@
 //
 // ###################################################################
 var IS_CHROME = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
-var CANVAS_WIDTH = 500;
-var CANVAS_HEIGHT = 500;
+var CANVAS_WIDTH = 600;
+var CANVAS_HEIGHT = 600;
 var SPRITE_SHEET_SRC = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAAEACAYAAAADRnAGAAACGUlEQVR42u3aSQ7CMBAEQIsn8P+/hiviAAK8zFIt5QbELiTHmfEYE3L9mZE9AAAAqAVwBQ8AAAD6THY5CgAAAKbfbPX3AQAAYBEEAADAuZrC6UUyfMEEAIBiAN8OePXnAQAAsLcmmKFPAQAAgHMbm+gbr3Sdo/LtcAAAANR6GywPAgBAM4D2JXAAABoBzBjA7AmlOx8AAEAzAOcDAADovTc4vQim6wUCABAYQG8QAADd4dPd2fRVYQAAANQG0B4HAABAawDnAwAA6AXgfAAAALpA2uMAAABwPgAAgPoAM9Ci/R4AAAD2dmqcEQIAIC/AiQGuAAYAAECcRS/a/cJXkUf2AAAAoBaA3iAAALrD+gIAAADY9baX/nwAAADNADwFAADo9YK0e5FMX/UFACA5QPSNEAAAAHKtCekmDAAAAADvBljtfgAAAGgMMGOrunvCy2uCAAAACFU6BwAAwF6AGQPa/XsAAADYB+B8AAAAtU+ItD4OAwAAAFVhAACaA0T7B44/BQAAANALwGMQAAAAADYO8If2+P31AgAAQN0SWbhFDwCAZlXgaO1xAAAA1FngnA8AACAeQPSNEAAAAM4CnC64AAAA4GzN4N9NSfgKEAAAAACszO26X8/X6BYAAAD0Anid8KcLAAAAAAAAAJBnwNEvAAAA9Jns1ygAAAAAAAAAAAAAAAAAAABAQ4COCENERERERERERBrnAa1sJuUVr3rsAAAAAElFTkSuQmCC';
 var LEFT_KEY = 37;
 var RIGHT_KEY = 39;
