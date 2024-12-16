@@ -5,7 +5,7 @@
 
 This Website was built by Isaac Nicholls, Paul Abrahams and Rogerio Soares for Code Institute Hackathon #1. The brief for the site was a fairly open scope, with the main point being an interactive site using Javascript at its core. After some research and brainstorming wehad the idea of an arcade game simulator, where the user could feel as if they were at an arcade playing the games they used to enjoy. This helped to tailor the User stories and styling.   
 
-👩🏻‍💻 Here is an example of this website and its homepage ![Am I Responsive](/assets/images/rdme-img/)
+👩🏻‍💻 Here is an example of this website and its homepage ![Am I Responsive](/assets/images/rdme-image/responsive.png)
 
 Link to deployed and finished site: https://github.com/IsaacNicholls1/TheAiTeam
 
@@ -299,19 +299,20 @@ The following HTML snippet is used to include a placeholder for the footer conte
  
 ## Accessibility
  - We tested the page with lighthouse and the accessibility and performance scores are shown below
- ![lighthouse scores](/assets/images/)
- - I believe that these could be greatly mimproved these by following the prompts, but mainly by resizing images, as these are slowing the site loading down. This would greatly increase the lighthouse scores. 
- ![lighthouse scores final](/assets/images/rdme-img/)
+![lighthouse scores](/assets/images/rdme-image/lighthouse1.png)
+![lighthouse scores](/assets/images/rdme-image/lighthouse2.png)
+![lighthouse scores](/assets/images/rdme-image/lighthouse3.png)
+ 
 
 ## Responsivity
 - We tested the website with DevTools so that it worked across all different device sizes, including mobile and tablet. This is very important as it must be functional across all types of devices. The games must work on all devices and be compatible.
 
 - We checked the site was responsive across all devices. Originally we had a problem with ...
 
-![Am I Responsive home](/assets/images/rdme-img)
-![Am I Responsive connect](/assets/images/rdme-img)
-![Am I Responsive your course](/assets/images/rdme-img)
-![Am I Responsive contact](/assets/images/rdme-img)
+![Am I Responsive home](/assets/images/rdme-image/responsive.png)
+![Am I Responsive about](/assets/images/rdme-image/responsiveabout.png)
+![Am I Responsive game](/assets/images/)
+![Am I Responsive contact](/assets/images/rdme-image/responsivecontact.png)
 
 ## Device Testing
 
@@ -327,12 +328,7 @@ Testing has been done on the following browsers:
 
 - Chrome (& Developer tools)
 - Safari
-
-# Testing Table #
-
-![Testing Table](/assets/images/rdme-img/)
-
-  
+ 
   <hr>
 <p><a href="#contents">Back To Top</a></p>\
 
@@ -346,53 +342,61 @@ User Story:
 ![User story](/assets/images/rdme-image/userstories/userstory1done.png)
 
 --
+
 2. 
 User Story:
 ![User story](/assets/images/rdme-image/userstories/userstory2done.png)
+
 --
+
 3.
 User Story:
 ![User story](/assets/images/rdme-image/userstories/)
 
 --
+
 4.
 User Story:
 ![User story](/assets/images/rdme-image/userstories/userstory4done.png)
+
 --
+
 5. 
 User Story:
 ![User story](/assets/images/rdme-image/userstories/userstory5done.png)
 
 --
+
 6.
 User Story:
 ![User story](/assets/images/rdme-image/userstories/userstory6done.png)
+
 --
+
 7.
+User Story: please see future featues
 
-User Story:
-![User story](/assets/images/rdme-image/userstories/)
-
+--
 
 8.
+User Story: please see future featues
 
-User Story:
-![User story](/assets/images/rdme-image/userstories/)
-
+--
 
 9.
 
 User Story:
 ![User story](/assets/images/rdme-image/userstories/userstory9done.png)
 
+--
 
 10.
-
 User Story:
-![User story](/assets/images/rdme-image/userstories/)
+![User story](/assets/images/rdme-image/userstories/userstory10done.png)
+
+--
 
 11.
-
 User Story:
 ![User story](/assets/images/rdme-image/userstories/userstory11done.png)
 
@@ -413,7 +417,7 @@ User Story:
 
 ### Other issue/bug
 
-- 
+- Out footer text was not wanting to line up and be the same as the rest on the font for the pages. This had to be fixed and debugged. 
 
 ### Poor Font for User
 
@@ -508,8 +512,7 @@ How I deployed this site :
 ## Use of AI
 
 - We utilised AI in this project in the form of CoPilot. This helped to create basic HTML structures and to edit parts of code that needed it, to structure and help keep styling the same. I found it very useful overall and saved me a great deal of time, however I found when using, it needed a close eye kept on it as it sometimes adds in extra closing tags and code that is sometimes not needed. 
-
-- It was used in the creating of some of the Javascript sections, and also to create ontent for the privacy policy and Terms and Conditions sections. 
+- It was used in the creating of some of the Javascript sections, and also to create content for the privacy policy and Terms and Conditions sections. 
 
 # Other issues #
 
@@ -519,12 +522,21 @@ How I deployed this site :
 - This helped to explain the merge conflicts and how to resolve the issue, which was then implemented and the issue fixed.  
 
 # Future features #
-- If we had more time, we would have liked to add in an additional feature for the games, which would have been able to show the score of the player in relation to the top and highest scores of others as a leaderboard, for each game. 
--  
+- If we had more time, we would have liked to add in an additional feature for the games, which would have been able to show  the score of the player in relation to the top and highest scores of others as a leaderboard, for each game. 
+-  We had a nice javascript image to use for the hero of each page which gave the effect of flying through space, we would have really liked to use this image/design but ran out of time to implement it. 
 - One extra thing would have been to add in a search bar at the top in the navbar as this would provide a better UX, giving the user the ability to find what they need from anywhere in the site. 
 - We would have liked to improve our lighthouse scores, and get them all up into the 90's 
-- A future feature that we wished to add was....
-- I would have liked to develop my testing table further, as all aspects of the site were tested but documentation in the readme could have been more thorough. 
+- A future feature that we wished to add was the option of adding an easter egg for users to find within the games, or somewhere on each page. If clicked and found this could then increase he score, or give a hint to the user of how to win the game. We did not have time to implement this. 
+- We would have liked to develop our testing table further, as all aspects of the site were tested but documentation in the readme could have been more thorough for this, again we ran out of time. 
+- We wanted to provide a description of how to play each game with text that pops up in a modal. 
+- We wished to add a coin slot to our graphics, and had the idea of using javascript to make a coin appear when you hovered over, and it fall into the slot when you clicked. We did some testing of this and did get it to a working stage but it did not make it into the end product unfortunately, but with more time it would have. 
+
+- Future features that we would have liked to implement from our user stories
+   User Story:
+   ![User story](/assets/images/rdme-image/userstories/userstory13.png)
+   User Story:
+   ![User story](/assets/images/rdme-image/userstories/userstory7.png)
+
 
 ###  Acknowledgments
 - We would like to thank Emma at CI for her help and encouragement. 
