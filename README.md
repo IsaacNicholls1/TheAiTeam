@@ -1,6 +1,3 @@
-
-
-
 # The Arcade
 
 This Website was built by Isaac Nicholls, Paul Abrahams and Rogerio Soares for Code Institute Hackathon #1. The brief for the site was a fairly open scope, with the main point being an interactive site using Javascript at its core. After some research and brainstorming wehad the idea of an arcade game simulator, where the user could feel as if they were at an arcade playing the games they used to enjoy. This helped to tailor the User stories and styling.   
@@ -253,6 +250,7 @@ The following HTML snippet is used to include a placeholder for the footer conte
  - These wireframes have been created using Balsamiq to define the key feature layout to guide the user experience design. 
  Utilising the Bootstrap framework and available components allows for the construction of a page that feels familiar for ease of navigation whilst also allowing for well structured content and a responsive design.
  The wireframes were developed at the start of the project and then worked on as we went through, to tweak the changed we made to the design and feel of the site
+ - They differ slightly to the exact look of the site as we decided we had to use different images and styles to the wire frame ideas. 
     
   - Home Page Wireframe
 
@@ -284,18 +282,25 @@ The following HTML snippet is used to include a placeholder for the footer conte
 
 ## HTML Validation
 - Initial HTML Validation was performed using the W3C Mark up service and the results can be found in this document. 
-- No Issues with any of the pages.
+- Any issues were dealt with at the time. 
 
-![html1](/assets/images/rdme-img/)
-![html2](/assets/images/rdme-img/)
-![html3](/assets/images/rdme-img/)
-![html4](/assets/images/rdme-img/)
+![html1](/assets/images/rdme-image/htmlvalidator.png)
+![html2](/assets/images/rdme-image/htmlvalidator2.png)
+![html3](/assets/images/rdme-image/htmlvalidator3.png)
+![html4](/assets/images/rdme-image/html4.png)
+![html5](/assets/images/rdme-image/html5.png)
+![html6](/assets/images/rdme-image/html6.png)
   
 ## CSS Validation
-- Initial W3C CSS style sheet validation link 
-![Css1](/assets/images/rdme-img)
-- Test W3C Validation CSS style sheet validation with css error fixed. 
-![Css2](/assets/images/rdme-img)
+- W3C CSS style sheet validation link 
+![Css1](/assets/images/rdme-image/cssvalidator.png)
+
+
+## JS Validation
+- Initial validation
+![JS](/assets/images/rdme-image/jsvalidation.png)
+- The test showed that the only warnings showing up were due top the bootstrap style insert on line 2.  
+
  
 ## Accessibility
  - We tested the page with lighthouse and the accessibility and performance scores are shown below
@@ -311,7 +316,6 @@ The following HTML snippet is used to include a placeholder for the footer conte
 
 ![Am I Responsive home](/assets/images/rdme-image/responsive.png)
 ![Am I Responsive about](/assets/images/rdme-image/responsiveabout.png)
-![Am I Responsive game](/assets/images/)
 ![Am I Responsive contact](/assets/images/rdme-image/responsivecontact.png)
 
 ## Device Testing
@@ -351,7 +355,7 @@ User Story:
 
 3.
 User Story:
-![User story](/assets/images/rdme-image/userstories/)
+![User story](/assets/images/rdme-image/userstories/userstory3done.png)
 
 --
 
@@ -439,6 +443,15 @@ User Story:
 
 - There are some errors/warnings in lighthouse which would improve the score. We will research these before the next project and make sure to find out how to fix them. 
 
+### Responsiveness
+
+- Responsiveness issues were encountered with the games pages - we would have liked to implement and test these further but ran out of time. 
+- With more time this could have been tested further, the games were responsive but not all the way and with every device. We would have liked to test and implement these better, for enhanced UX. 
+
+### Responsiveness
+
+- There were also other smaller bugs and developments we would have liked to have made - if we had more time things such as the text, titles, spacing and alignment were things that were flagged up to change and edit. 
+
 <hr>
 <p><a href="#contents">Back To Top</a></p>
 
@@ -506,8 +519,12 @@ How I deployed this site :
 - The HTML & CSS uses Bootstrap Version 5.3: https://getbootstrap.com/docs/5.3/getting-started/introduction/ 
 - I used other coding tools and resources such as snippets of code from our previous CI projects to guide and aid when we needed reminding about the correct way to use the code.
 - The following sites were used for examples of code for the games, and the stars hero image. 
-- SITES USED HERE
-- Pexels was used to get some photos. 
+- SITES/GitHub pages used here : 
+- https://codepen.io/adelciotto/pen/WNzRYy
+- https://www.geeksforgeeks.org/create-a-snake-game-using-html-css-and-javascript/
+- https://codepen.io/hellokatili/pen/xwKRmo
+- https://codepen.io/bts/pen/BygMzB
+- Pexels was used to get some photos, alongside photostock and google images. 
 
 ## Use of AI
 
@@ -529,6 +546,7 @@ How I deployed this site :
 - A future feature that we wished to add was the option of adding an easter egg for users to find within the games, or somewhere on each page. If clicked and found this could then increase he score, or give a hint to the user of how to win the game. We did not have time to implement this. 
 - We would have liked to develop our testing table further, as all aspects of the site were tested but documentation in the readme could have been more thorough for this, again we ran out of time. 
 - We wanted to provide a description of how to play each game with text that pops up in a modal. 
+![Text Game](/assets/images/rdme-image/futuretext.png)
 - We wished to add a coin slot to our graphics, and had the idea of using javascript to make a coin appear when you hovered over, and it fall into the slot when you clicked. We did some testing of this and did get it to a working stage but it did not make it into the end product unfortunately, but with more time it would have. 
 
 - Future features that we would have liked to implement from our user stories

@@ -10,67 +10,10 @@
     <link href="https://unpkg.com/nes.css/css/nes.css" rel="stylesheet">
 
     <style>
-        /* body { */
-            /* margin: 0; */
-            /* overflow: hidden; */
-            /* display: flex; */
-            /* justify-content: center; */
-            /* align-items: center; */
-            /* height: 10vh; */
-            /* background-color: black; */
-        /* } */
         canvas {            
-            /* display: block; */
             background-color: white;
-            /* border: 2px solid red; */
             height: 600px;
-        }
-        /* <style>
-        @import url('https://fonts.googleapis.com/css2?family=Metal+Mania&display=swap');
-        @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;300;400;500&display=swap'); */
-        body {
-            text-align: center;
-            background: url('./assets/images/arcade-room.jpg') no-repeat center center fixed;
-            background-size: cover;
-        }
-
-        .geeks {
-            font-size: 40px;
-            font-weight: bold;
-            color: green;
-        }
-
-        #board {
-            background-color: #333;
-            display: block;
-            margin: 0 auto;
-            position: relative;
-        }
-
-        .start-button {
-            margin-top: 20px;
-        }
-
-        .game-over {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            color: red;
-            font-size: 25px;
-            font-family: 'Press Start 2P', cursive;
-            display: none;
-        }
-        .game-over-press {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            color: red;
-            font-size: 10px;
-            font-family: 'Press Start 2P', cursive;
-            display: none;
-        }
+        }       
 
         /**
         * Hero Header
@@ -93,16 +36,12 @@
         }
 
         .hero-header-title-block {
-            /* background-color: var(--bg-color); */
-            /* background-color: blue; */
             flex: 3;
-            /* padding: 10px 10px 20px 10px; */
             text-align: center;
             border: 1px solid darkslategrey;
         }
         .hero-header-title-block .headline{
             margin-top: 0px;
-            /* font-family: 'Metal Mania', cursive; */    
             font-size: 3.9rem;
             letter-spacing: 1px;
             color: var(--primary-color);
@@ -155,7 +94,6 @@
 
 <body data-bs-theme="dark">
 
-    <!-- nav bar -->
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">The Arcade</a>
@@ -190,7 +128,6 @@
         </div>
     </nav>
 
-     <!-- game placeholder -->
      <section id="game-placeholder">
         <div class="container col-12 col-md-6">    
             <div class="hero-header-title-block mt-3">
@@ -205,42 +142,7 @@
             </div>
         </div>
     </section>
-
-    <!-- <section id="game-placeholder">
-        <div class="hero-header-title-block p-0">
-            <h1 class="headline">The Arcade <span></span></h1>
-        </div>
-        <div class="container mb-5 p-5" style="background-color: black;">
-            <div class="col-md-122 text-center nes-container is-centered">
-                <canvas id="game-canvas" width="600" height="600"></canvas> 
-                <canvas id="game-canvas" width="5" height="5"></canvas>
-                
-                
-            </div>
-        </div>
-    </section> -->
-
-
-
-    <!-- game placeholder -->
-    <!-- <section id="game-placeholder">
-        <div class="container my-3 col-12 col-md-6">    
-            <div class="hero-header-title-block p2-4">
-                <h1 class="headline">The Arcade <span></span></h1>
-            </div>    
-            <div class="container" style="background-color: black;">
-                <div class="col-md-12 text-center nes-container with-title is-centered">
-                    <canvas id="game-canvas" width="640" height="640"></canvas>
-
-
-
-        
-                </div>
-            </div>
-        </div>
-    </section> -->
     
-    <!-- footer -->
     <footer id="footer" class="mt-auto py-5 bg-dark text-white">
         <div class="container">
             <div class="row">
@@ -256,42 +158,27 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
 <script>
-    /* Simple JavaScript Inheritance
- * By John Resig http://ejohn.org/
- * MIT Licensed.
- */
-// Inspired by base2 and Prototype
 (function(){
   var initializing = false, fnTest = /xyz/.test(function(){xyz;}) ? /\b_super\b/ : /.*/;
  
-  // The base Class implementation (does nothing)
   this.Class = function(){};
  
-  // Create a new Class that inherits from this class
   Class.extend = function(prop) {
     var _super = this.prototype;
    
-    // Instantiate a base class (but only create the instance,
-    // don't run the init constructor)
     initializing = true;
     var prototype = new this();
     initializing = false;
    
-    // Copy the properties over onto the new prototype
     for (var name in prop) {
-      // Check if we're overwriting an existing function
       prototype[name] = typeof prop[name] == "function" &&
         typeof _super[name] == "function" && fnTest.test(prop[name]) ?
         (function(name, fn){
           return function() {
             var tmp = this._super;
-           
-            // Add a new ._super() method that is the same method
-            // but on the super-class
+
             this._super = _super[name];
            
-            // The method only need to be bound temporarily, so we
-            // remove it when we're done executing
             var ret = fn.apply(this, arguments);        
             this._super = tmp;
            
@@ -301,31 +188,21 @@
         prop[name];
     }
    
-    // The dummy class constructor
     function Class() {
-      // All construction is actually done in the init method
       if ( !initializing && this.init )
         this.init.apply(this, arguments);
     }
    
-    // Populate our constructed prototype object
     Class.prototype = prototype;
    
-    // Enforce the constructor to be what we expect
     Class.prototype.constructor = Class;
  
-    // And make this class extendable
     Class.extend = arguments.callee;
    
     return Class;
   };
 })();
 
-
-// ###################################################################
-// shims
-//
-// ###################################################################
 (function() {
   var requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame || window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
   window.requestAnimationFrame = requestAnimationFrame;
@@ -338,10 +215,7 @@
   }
 })();
 
-// ###################################################################
-// Constants
-//
-// ###################################################################
+
 var IS_CHROME = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
 var CANVAS_WIDTH = 600;
 var CANVAS_HEIGHT = 600;
@@ -359,10 +233,6 @@ var ALIEN_SQUAD_WIDTH = 11 * ALIEN_X_MARGIN;
 
 
 
-// ###################################################################
-// Utility functions & classes
-//
-// ###################################################################
 function getRandomArbitrary(min, max) {
     return Math.random() * (max - min) + min;
 }
