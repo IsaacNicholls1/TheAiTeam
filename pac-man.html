@@ -7,15 +7,33 @@
     <title>Pac Man</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
-    <link href="https://unpkg.com/nes.css/css/nes.css" rel="stylesheet">
+    <link href="https://unpkg.com/nes.css/css/nes.css" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/css/style.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Metal+Mania&display=swap');
         @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;300;400;500&display=swap');
+
+        .navbar-logo {
+            display: none;
+        }
+        .nav-item * {
+            font-family: "Press Start 2P", system-ui;
+            font-weight: 200;
+            font-style: normal;
+        }
+        body,
+        footer,
+        header,
+        nav{
+            background-color: #212529;
+            color: #fff;
+        }
 
         body {
             text-align: center;
             background: url('./assets/images/arcade-room.jpg') no-repeat center center fixed;
             background-size: cover;
+            margin-top: 78.2px;
         }
 
         .geeks {
@@ -52,7 +70,7 @@
             left: 50%;
             transform: translate(-50%, -50%);
             color: red;
-            font-size: 10px;
+            /* font-size: 10px; */
             font-family: 'Press Start 2P', cursive;
             display: none;
         }
@@ -73,23 +91,18 @@
         :root {
             --primary-color: #fcf704;
             --secondary-color: #ccc;
-            /* --bg-color:#101010; */
             --bg-color: blue;
             --smoke: whitesmoke;
         }
 
-        .hero-header-title-block {
-            /* background-color: var(--bg-color); */
-            /* background-color: blue; */
-            flex: 3;
-            /* padding: 10px 10px 20px 10px; */
+        .hero-header-title-block {   
+            flex: 3;   
             text-align: center;
             border: 1px solid darkslategrey;
         }
 
         .hero-header-title-block .headline {
             margin-top: 0px;
-            /* font-family: 'Metal Mania', cursive; */
             font-size: 3.9rem;
             letter-spacing: 1px;
             color: var(--primary-color);
@@ -163,72 +176,14 @@
             width: 382px;
             border-radius: 5px;
             margin: 20px auto;
-        }
-
-        #shim {
-            font-family: 'Permanent Marker', cursive;
-            position: absolute;
-            visibility: hidden
-        }
-
-        h1 {
-            font-family: 'Permanent Marker', cursive;
-            text-align: center;
-            color: yellow;
-        }
-
-        body {
-            /* width: 342px; */
-            margin: 0px auto;
-            font-family: sans-serif;
-        }
-
-        a {
-            text-decoration: none;
-            color: #0000FF;
-        }
+        }  
     </style>
 </head>
 
 
 <body data-bs-theme="dark">
-
     <!-- nav bar -->
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#">The Arcade</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.html">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="about.html">About</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="games.html" role="button" data-bs-toggle="dropdown"
-                            aria-expanded="false">
-                            Games
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="snake.html">Snake</a></li>
-                            <li><a class="dropdown-item" href="space-invaders.html">Space Invaders</a></li>
-                            <li><a class="dropdown-item active" aria-current="page" href="pac-man.html">Pac Man</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="contact.html">Contact</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-
+    <div id="navbar-placeholder"></div>
     <!-- game placeholder -->
     <section id="game-placeholder">
         <div class="container my-3 col-12 col-md-6">
@@ -259,6 +214,39 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script>
+
+
+    // Function to load the navbar
+    function loadNavbar() {
+            fetch('includes/navbar.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('navbar-placeholder').innerHTML = data;
+                    setActiveNavLink();
+                });
+        }        
+
+        // Function to set the active link in the navigation menu
+        function setActiveNavLink() {
+            const path = window.location.pathname;
+            const page = path.split("/").pop();
+
+            const navLinks = {
+                'index.html': 'nav-home',
+                'about.html': 'nav-about',
+                'games.html': 'nav-games',
+                'contact.html': 'nav-contact'
+            };
+
+            const activeLinkId = navLinks[page];
+            if (activeLinkId) {
+                const activeLink = document.getElementById(activeLinkId);
+                activeLink.classList.add('active');
+                activeLink.setAttribute('aria-current', 'page');
+            }
+        }
+        loadNavbar();
+
         var NONE = 4,
             UP = 3,
             LEFT = 2,

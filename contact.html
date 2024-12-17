@@ -22,16 +22,17 @@
             font-style: normal;
         }
         body,
-        footer,
+        footer *,
         header,
-        nav {
+        nav{
+            font-family: "Press Start 2P", system-ui;
             background-color: #212529;
             color: #fff;
         }
         h2{
             font-size: 1.5rem;
         }
-        p {
+        p, .text-start {
             font-family: "Press Start 2P", system-ui;
             font-weight: 200;
             font-style: normal;
@@ -44,6 +45,14 @@
         }
         .nes-input {
             height: 3.5rem;
+        }        
+        form {
+            color: white;
+        }
+        #hero {
+            background-image: url('assets/images/the-arcade-hero.jpg'); 
+            background-size: cover; 
+            background-position: center;
         }
         @media (max-width: 768px) {
             .navbar-text {
@@ -61,9 +70,10 @@
      <header>
         <div id="navbar-placeholder"></div>
      </header>   
+
     <!-- hero image -->
-    <section>
-        <div style="background-image: url('assets/images/the-arcade-hero.jpg'); background-size: cover; background-position: center;">
+    <section id="hero">
+        <div>
             <div
                 class="container h-100 d-flex flex-column justify-content-center align-items-center text-center text-white hero-image py-5">
      

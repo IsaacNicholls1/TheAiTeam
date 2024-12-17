@@ -25,9 +25,10 @@
         }
 
         body,
-        footer,
+        footer *,
         header,
         nav {
+            font-family: "Press Start 2P", system-ui;
             background-color: #212529;
             color: #fff;
         }
@@ -56,12 +57,13 @@
             height: 100px;
         }
 
-        p {
+        .container p, p.lead {
             font-family: "Press Start 2P", system-ui;
             font-weight: 200;
             font-style: normal;
             font-size: 0.9rem;
         }
+     
 
         /* @media (min-width: 992px) {
             .profile-container {
@@ -79,13 +81,12 @@
     </header>
     <main>
         <!-- hero image -->
-    <section
-    style="background-image: url('assets/images/the-arcade-hero.jpg'); background-size: cover; background-position: center;">
-    <div
-        class="container h-100 d-flex flex-column justify-content-center align-items-center text-center text-white hero-image py-5">
-        <h1 class="mb-4">About The Arcade</h1>
-    </div>
-</section>
+    <section>
+        <div
+            class="container h-100 d-flex flex-column justify-content-center align-items-center text-center text-white hero-image py-5">
+            <h1 class="mb-4">About The Arcade</h1>
+        </div>
+    </section>
 
         <!-- about -->
         <section>
